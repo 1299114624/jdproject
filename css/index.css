@@ -1,0 +1,249 @@
+.grid {
+    height: 480px;
+}
+/* 第一列 */
+.grid-col1 {
+    width: 190px;
+    height: 100%;
+    color: #666;
+    /* 给反斜杠字体大小 */
+    font-size: 14px;
+    background-color: #fff;
+}
+.grid-col1 ul {
+    height: 468px;
+    margin: 6px 0;
+}
+.grid-col1 a {
+    color: #666;
+    /* 给链接文字大小 */
+    font-size: 14px;
+    margin:0 3px;
+}
+.grid-col1 a:hover {
+    color: #f10215;
+}
+.grid-col1 ul li {
+    padding-left: 18px;
+    height: 26px;
+    line-height: 26px;
+}
+.grid-col1 ul li:hover {
+    background-color: #9c9698;
+}
+/* 第二列 */
+.grid-col2 {
+    width: 590px;
+    height: 100%;
+    margin-left: 10px;
+}
+.focus, .focus_item, .focus_main {
+    height: 470px;
+}
+.focus {
+    position: relative;
+    float: left;
+    width: 590px;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.focus_list {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.focus .slider_control {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    width: 24px;
+    height: 40px;
+    background-color: rgba(0,0,0,.2);
+    line-height: 40px;
+    text-align: center;
+    z-index: 999;
+}
+.slider_control i {
+    font-size: 20px;
+    color: hsla(0,0%,100%,.4)
+}
+.slider_control_prev {
+    left: 0;
+}
+.slider_control_next {
+    right: 0;
+}
+.focus .slider_indicators {
+    z-index: 1;
+    margin-left: 0!important;
+    left: 46px;
+    bottom: 20px;
+    position: absolute;
+    text-align: center;
+}
+.slider_indicators i {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    display: inline-block;
+    border-radius: 50%;
+    background: #fff;
+}
+.slider_indicators i.active {
+    background-color: red;
+}
+.focus .slider_list{
+    position: relative;
+}
+.focus .slider_wrap {
+    position: absolute;
+    width: 9999px;
+    height: 470px;
+}
+.focus .slider_wrap li {
+    width: 590px;
+    height: 470px;
+    float: left;
+}
+.slider_wrap li a {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.slider_wrap li img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+/* 第三列 */
+.grid-col3 {
+    width: 190px;
+    height: 100%;
+    margin-left: 10px;
+}
+.grid-col3 > div {
+    margin-top: 10px;
+}
+.grid-col3-img {
+    display: block;
+    width: 190px;
+    height: 150px;
+}
+.grid-col3-img img {
+    width: 100%;
+    height: 100%;
+}
+/* 第四列 */
+.grid-col4 a {
+    color: #666;
+}
+.grid-col4 {
+    width: 190px;
+    height: 100%;
+}
+.grid-user {
+    height: 150px;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 10px;
+}
+.user-inner {
+    height: 78px;
+    padding-top: 62px;
+    position: relative;
+}
+.user-avatar {
+    width: 65px;
+    height: 65px;
+    position: absolute;
+    left: 50%;
+    margin-left: -32px;
+    top: -10px;
+}
+.user-avatar a ,.user-avatar img {
+    width: 55px;
+    height: 55px;
+    display: block;
+}
+.user-avatar a {
+    border: 5px solid #e3e1df;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 3px 6px 25px #c3c3c3;
+}
+.user-show {
+    padding: 0 10px;
+}
+.user-show p {
+    overflow: hidden;
+    line-height: 20px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #888;
+}
+.user-show a {
+    padding: 0 2px;
+}
+.user-profit {
+    height: 25px;
+    margin-top: 10px;
+    font-size: 0;
+}
+.user-profit a {
+    display: inline-block;
+    margin: 0 5px;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    font-size: 12px;
+    text-align: center;
+    color: #e43f3b;
+    border-radius: 13px;
+    box-shadow: 6px 8px 20px rgba(45,45,45,.15);
+}
+.user-profit .user-profit-pl {
+    background: #363634;
+    color: #e5d790;
+}
+.grid-news {
+    height: 130px;
+    overflow: hidden;
+    background-color: #fff;
+}
+.news-tab-head {
+    padding-top: 8px;
+    line-height: 13px;
+    font-size: 0;
+    position: relative;
+}
+.grid-news .mod-tab-head {
+    padding: 0 15px;
+    font-size: 12px;
+    color: #333;
+    border-right: 1px solid #dfe0e1;
+}
+.grid-news .tab-head-last {
+    border-right: 0;
+}
+.news-tab-active {
+    width: 27px;
+    height: 2px;
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    margin-left: 13px;
+    background-color: #db192b;
+    transition: transform .3s ease;
+}
+.grid-news-more {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    font-size: 12px;
+}
+.grid-news-more:hover {
+    color: #f10215;
+}
+.grid-expand{
+    height: 289px;
+}

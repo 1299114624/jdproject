@@ -1,0 +1,40 @@
+blockquote,body,button,dd,dl,dt,fieldset,form,h1,h2,h3,h4,h5,h6,hr,input,legend,li,ol,p,pre,td,textarea,th,ul {
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    font-size: 12px;
+    color: #999;
+}
+a:hover {
+    color: #c81623
+}
+i {
+    font-style: normal;
+}
+input,button {
+    border: 0;
+    outline: none;
+    float: left;
+}
+ul {
+    list-style: none;
+}
+body {
+    background-color: #f6f6f6;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;
+}
+.fl {
+    /* 浮动的公共类 */
+    float: left;
+}
+.fr {
+    float: right;
+}
+.f10 {
+    color: #f10215!important;
+}
