@@ -1,7 +1,32 @@
 .grid {
     height: 480px;
 }
-/* 第一列 */
+ a {
+    color: #666;
+}
+a:hover {
+    color: #f10215;
+}
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont.eot');
+    src: url('../fonts/iconfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/iconfont.woff') format('woff'),
+    url('../fonts/iconfont.ttf') format('truetype'),
+    url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+/* ============================第一列=========================================*/
+.grid {
+    margin-bottom: 30px;
+    position: relative;
+}
 .grid-col1 {
     width: 190px;
     height: 100%;
@@ -9,19 +34,36 @@
     /* 给反斜杠字体大小 */
     font-size: 14px;
     background-color: #fff;
+    position: relative;
+}
+.grid-col1 .ad {
+    width: 250px;
+    height: 480px;
+    position: absolute;
+    top: 0;
+    left: -250px;
+}
+.grid-col1 .ad:hover .ad-r {
+    width: 790px;
+}
+.ad-r {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    z-index: 999;
+    width: 0;
+    height: 480px;
+    background: url(../images/banner-ad2.jpg);
+    transition: all 0.3s ease
 }
 .grid-col1 ul {
     height: 468px;
     margin: 6px 0;
 }
 .grid-col1 a {
-    color: #666;
     /* 给链接文字大小 */
     font-size: 14px;
     margin:0 3px;
-}
-.grid-col1 a:hover {
-    color: #f10215;
 }
 .grid-col1 ul li {
     padding-left: 18px;
@@ -29,51 +71,64 @@
     line-height: 26px;
 }
 .grid-col1 ul li:hover {
-    background-color: #9c9698;
+    background-color: #ccc;
 }
-/* 第二列 */
+/* =========================================第二列 ===============================*/
 .grid-col2 {
     width: 590px;
     height: 100%;
     margin-left: 10px;
 }
-.focus, .focus_item, .focus_main {
-    height: 470px;
+/* grid 轮播图 */
+.grid-banner1 {
+    background: url(../images/banner1.jpg) no-repeat;
+}
+.grid-banner2 {
+    background: url(../images/banner2.jpg) no-repeat;
+}
+.grid-banner3 {
+    background: url(../images/banner3.jpg) no-repeat;
+}
+.grid-banner4 {
+    background: url(../images/banner4.jpg) no-repeat;
+}
+.grid-banner5 {
+    background: url(../images/banner5.jpg) no-repeat;
+}
+.grid-banner6 {
+    background: url(../images/banner6.jpg) no-repeat;
+}
+.grid-banner7 {
+    background: url(../images/banner7.jpg) no-repeat;
+}
+.grid-banner8 {
+    background: url(../images/banner8.jpg) no-repeat;
 }
 .focus {
     position: relative;
     float: left;
     width: 590px;
+    height: 470px;
     margin-top: 10px;
     overflow: hidden;
 }
-.focus_list {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-.focus .slider_control {
+.focus .grid-control {
     position: absolute;
     top: 50%;
     margin-top: -20px;
     width: 24px;
     height: 40px;
     background-color: rgba(0,0,0,.2);
-    line-height: 40px;
-    text-align: center;
-    z-index: 999;
-}
-.slider_control i {
-    font-size: 20px;
-    color: hsla(0,0%,100%,.4)
-}
-.slider_control_prev {
+    z-index: 99;
+    display: block;
+} 
+.focus .grid-control-l{
     left: 0;
 }
-.slider_control_next {
+.focus .grid-control-r{
     right: 0;
 }
-.focus .slider_indicators {
+/* .focus .slider_indicators {
     z-index: 1;
     margin-left: 0!important;
     left: 46px;
@@ -91,31 +146,13 @@
 }
 .slider_indicators i.active {
     background-color: red;
-}
-.focus .slider_list{
-    position: relative;
-}
-.focus .slider_wrap {
-    position: absolute;
-    width: 9999px;
-    height: 470px;
-}
-.focus .slider_wrap li {
+} */
+.grid .grid_wrap a {
     width: 590px;
     height: 470px;
-    float: left;
-}
-.slider_wrap li a {
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-}
-.slider_wrap li img {
     display: block;
-    width: 100%;
-    height: 100%;
 }
-/* 第三列 */
+/* ========================================第三列 =================================*/
 .grid-col3 {
     width: 190px;
     height: 100%;
@@ -133,15 +170,13 @@
     width: 100%;
     height: 100%;
 }
-<<<<<<< HEAD
-/* 第四列 */
-.grid-col4 a {
-    color: #666;
-}
+/* =====================================第四列 ================================*/
+
 .grid-col4 {
     width: 190px;
     height: 100%;
 }
+/* ===========user ==============*/
 .grid-user {
     height: 150px;
     background-color: #fff;
@@ -202,10 +237,15 @@
     border-radius: 13px;
     box-shadow: 6px 8px 20px rgba(45,45,45,.15);
 }
+.user-profit a:hover {
+    background-color: #f10215;
+    color: #fff;
+}
 .user-profit .user-profit-pl {
     background: #363634;
     color: #e5d790;
 }
+/* ===========news ==============*/
 .grid-news {
     height: 130px;
     overflow: hidden;
@@ -242,14 +282,296 @@
     top: 8px;
     font-size: 12px;
 }
-.grid-news-more:hover {
-    color: #f10215;
+.news-tab-content{
+    position: relative;
+    padding-top: 8px;
+    margin: 0 15px;
+    height: 88px;
 }
-.grid-expand{
-    height: 289px;
-=======
-.grid-col4 {
-    width: 190px;
+.tab-content-item {
     height: 100%;
->>>>>>> 3ec6b5da877fdbecb59990b19cfa8a4893c64327
+    overflow: hidden;
+}
+.tab-content-item li {
+    max-width: 160px;   
+    line-height: 22px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+/* ===========service ==============*/
+.grid-service {
+    height: 190px;
+    position: relative;
+    overflow: hidden;
+    transition: all .2s ease;
+}
+.grid-service:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 15px;
+    display: block;
+    width: 160px;
+    height: 1px;
+    background-color: #ebeaea;
+    z-index: 1;
+}
+.service-entry {
+    overflow: hidden;
+    padding: 18px 11px 11px;
+    background-color: #fff;
+}
+.service-list {
+    height: 165px;
+}
+.service-list .service_ico {
+    display: block;
+    width: 20px;
+    height: 20px;
+    margin :4px auto 0;
+}
+.service-item {
+    position: relative;
+    float: left;
+    width: 42px;
+    height: 55px;
+    background-color: #fff;
+    text-align: center;
+}
+.service-item:hover .iconfont{
+    color: #f10215;
+    font-weight: 700;
+}
+.service-item .iconfont {
+    font-size: 20px;
+}
+.service-item .service_txt {
+    display: block;
+    height: 25px;
+    line-height: 25px;
+    color: #bea68d;
+}
+.service-list .service-corner {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    background-color: #e01121;
+    color: #fff;
+}
+.service-list .service-corner:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    border:solid;
+    border-width: 2px 6px;
+    border-color: #e01121 #e01121 #fff;
+}
+.service-corner {
+    vertical-align: top;
+}
+/* ===============================fooler部分(除开footer)========================== */
+/* =============sk================= */
+.sk {
+    height: 275px;
+    margin-bottom: 30px;
+}
+.sk-inner {
+    background-color: #fff;
+    overflow: hidden;
+}
+.sk-hd {
+    position: relative;
+    float: left;
+    width: 190px;
+    height: 275px;
+    background-color: #e83632;
+    color: #fff;
+}
+.sk-hd-lk {
+    width: 100%;
+    height: 100%;
+    color: #fff;
+}
+.sk-hd-lk:hover {
+    color: #fff;
+}
+.sk-hd-lk .sk-tit {
+    position: absolute;
+    left: 0;
+    top: 42px;
+    width: 100%;
+    font-size: 34px;
+    text-align: center;
+}
+.sk-hd-lk .sk-subtit {
+    position: absolute;
+    left: 0;
+    top: 90px;
+    width: 100%;
+    text-align: center;
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.5);
+}
+.sk-hd-lk .sk-icon {
+    position: absolute;
+    left: 86px;
+    top: 126px;
+    width: 20px;
+    height: 33px;
+    display: block;
+    background: url(../images/sprite.seckill.png) -35px -25px no-repeat;
+}
+.sk-hd-lk .sk-desc {
+    position: absolute;
+    left: 0;
+    top: 170px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+}
+.sk-hd-lk .sk-cd {
+    position: absolute;
+    left: 30px;
+    top: 212px;
+    height: 40px;
+}
+.sk .cd-item {
+    position: relative;
+    float: left;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    background-color: #2f3430;
+    margin-right: 5px;
+}
+.sk .cd-item::before {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #e83632;
+}
+.sk .cd-item-txt {
+    position: relative;
+    line-height: 40px;
+    font-weight: bold;
+    font-size: 20px;
+}
+.sk-bd {
+    float: left;
+}
+.sk-list {
+    position: relative;
+    float: left;
+    width: 800px;
+    /* border-right: 1px solid #f0f0f0; */
+    height: 275px;
+    overflow: hidden;
+}
+.sk-list-item {
+    width: 800px;
+    overflow: hidden;
+}
+.sk-inner-item {
+    position: relative;
+    width: 200px;
+    height: 275px;
+    float: left;
+}
+.sk-inner-item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    height: 275px;
+    background: #f0f0f0;
+}
+.sk-inner-item a {
+    position: relative;
+    display: block;
+    width: 190px;
+    height: 275px;
+    text-align: center;
+    margin: auto;
+}
+.sk-item-img {
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    left: 50%;
+    margin-left: -70px;
+    top: 40px;
+}
+.sk-item-img img {
+    width: 100%;
+    height: 100%;
+}
+.sk-inner-item p {
+    position: absolute;
+    width: 160px;
+    top: 190px;
+    left: 0;
+    padding: 0 15px;
+    line-height: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sk-item-price {
+    position: absolute;
+    width: 160px;
+    height: 20px;
+    left: 15px;
+    top: 230px;
+    padding: 1px;
+    background-color: #e6382f;
+    line-height: 20px;
+}
+.sk-item-price-new {
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
+}
+.sk-item-price-origin{
+    float: left;
+    width: 80px;
+    height: 20px;
+    text-align: center;
+    background-color: #fff;
+    color: #b7bcb8;
+    font-size: 12px;
+    text-decoration: line-through;
+}
+.sk-item-price i{
+    margin-right: 3px;
+    font-family: arial;
+    font-weight: 400;
+    font-size: 12px;
+}
+.sk-chn {
+    position: relative;
+    float: left;
+    width: 180px;
+    height: 260px;
+    padding: 8px 10px
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -7,14 +8,13 @@
     <meta name="Keywords" content="网上购物,网上商城,手机,笔记本,电脑,MP3,CD,VCD,DV,相机,数码,配件,手表,存储卡,京东" />
     <title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
     <link rel="shotcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/css/swiper.min.css">
     <link rel="stylesheet" href="css/normalize.css">
-<<<<<<< HEAD
     <link rel="stylesheet" href="css/init.css">
-=======
->>>>>>> 3ec6b5da877fdbecb59990b19cfa8a4893c64327
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
     <!-- header 部分 start -->
     <header>
@@ -29,9 +29,9 @@
         <div class="w">
             <ul class="fl city">
                 <li>
-                    <i class="iconfont f10">&#xe7c4</i> 
+                    <i class="iconfont f10">&#xe7c4</i>
                     <a href="#">北京</a>
-                </li> 
+                </li>
             </ul>
             <ul class="fr">
                 <li>
@@ -126,9 +126,13 @@
         </div>
     </div>
     <!-- 中间头部分 end-->
-    <!-- 中间分类区域start -->
+    <!-- 中间轮播区域start -->
     <div class="w grid">
         <div class="grid-col1 fl">
+            <div class="ad">
+                <img src="images/banner-ad1.png" alt="tp" width="250" height="480">
+                <div class="ad-r"></div>
+            </div>
             <ul>
                 <li>
                     <a href="#">家用电器</a>
@@ -141,7 +145,7 @@
                 </li>
                 <li>
                     <a href="#">家居</a>/<a href="#">家具</a>/<a href="#">家装</a>/<a href="#">厨具</a>
-                </li>      
+                </li>
                 <li>
                     <a href="#">男装</a>/<a href="#">女装</a>/<a href="#">童装</a>/<a href="#">内衣</a>
                 </li>
@@ -188,51 +192,58 @@
         </div>
         <div class="grid-col2 fl">
             <div class="focus">
-                <div class="focus_main">
-                    <div class="focus_list slider">
-                        <button class="slider_control slider_control_prev">
-                            <i class="iconfont">&#xe600</i>
-                        </button>
-                        <div class="slider_list">
-                            <div class="slider_wrap">
-                                <li><a href="#"><img src="images/banner1.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/banner2.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/banner3.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/banner4.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/banner5.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/banner6.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/banner7.jpg" alt=""></a></li>
-                                <li><a href="#"><img src="images/banner8.jpg" alt=""></a></li>
-                            </div>
-                        </div>
-                        <button class="slider_control slider_control_next">
-                            <i class="iconfont">&#xe601</i>
-                        </button>
-                        <div class="slider_indicators" style="margin-left: -76px;">
-                            <i class="active"></i>
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                            <i></i>
-                        </div>
+                <div class="grid-container swiper-container">
+                    <div class="grid_wrap swiper-wrapper">
+                        <a href="#" class="swiper-slide grid-banner8"></a>
+                        <a href="#" class="swiper-slide grid-banner1"></a>  
+                        <a href="#" class="swiper-slide grid-banner2"></a>  
+                        <a href="#" class="swiper-slide grid-banner3"></a>  
+                        <a href="#" class="swiper-slide grid-banner4"></a>  
+                        <a href="#" class="swiper-slide grid-banner5"></a>  
+                        <a href="#" class="swiper-slide grid-banner6"></a>  
+                        <a href="#" class="swiper-slide grid-banner7"></a>  
+                        <a href="#" class="swiper-slide grid-banner8"></a>  
+                        <a href="#" class="swiper-slide grid-banner1"></a>
                     </div>
+                    <div class="grid-control grid-control-l swiper-button-prev swiper-button-white"></div> 
+                    <div class="grid-control grid-control-r swiper-button-next swiper-button-white"></div>
+                    <div class="swiper-p1 swiper-pagination"></div>
                 </div>
             </div>
         </div>
-        <script src="js/move.js"></script>
-        <script src="js/bannerwrap.js"></script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/js/swiper.min.js"></script>
         <script>
-            sliderWrap.init('.slider')
+            var swiper = new Swiper('.grid-container',{
+            autoplay: true,
+            loop : true,
+            effect : 'fade',
+            fadeEffect: {
+                crossFade: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                    el: '.swiper-p1',
+                    clickable :true,
+                    renderBullet: function (index, className) {
+                        return '<li class="' + className + '">' +'</i>';
+                    },
+                },
+            });
         </script>
         <div class="grid-col3 fl">
-            <div><a href="#"><div class="grid-col3-img"><img src="images/banner-right1.jpg" alt="tp"></div></a></div>
-            <div><a href="#"><div class="grid-col3-img"><img src="images/banner-right2.jpg" alt="tp"></div></a></div>
-            <div><a href="#"><div class="grid-col3-img"><img src="images/banner-right3.jpg" alt="tp"></div></a></div>
+            <div><a href="#">
+                    <div class="grid-col3-img"><img src="images/banner-right1.jpg" alt="tp"></div>
+                </a></div>
+            <div><a href="#">
+                    <div class="grid-col3-img"><img src="images/banner-right2.jpg" alt="tp"></div>
+                </a></div>
+            <div><a href="#">
+                    <div class="grid-col3-img"><img src="images/banner-right3.jpg" alt="tp"></div>
+                </a></div>
         </div>
-<<<<<<< HEAD
         <div class="grid-col4 fr">
             <!-- 登录模块 -->
             <div class="grid-user">
@@ -264,198 +275,663 @@
                         <div class="news-tab-active"></div>
                         <a href="#" class="grid-news-more">更多</a>
                     </div>
-                    <div class="news-tab-content"></div>
+                    <div class="news-tab-content">
+                        <div class="tab-content-item tab-content-item1">
+                            <ul class="news-list">
+                                <li class="news-item">
+                                    <a href="#" class="news-item">
+                                        企业专享价：最高直降5000
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#" class="news-item">
+                                        打印巅峰24小时送大闸蟹券
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#" class="news-item">
+                                        助力S8 罗技新鼠标首发
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#" class="news-item">
+                                        天际厨电感恩专场豪礼免费拿
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content-item tab-content-item2" style="display:none">
+                            <ul class="news-list">
+                                <li class="news-item">
+                                    <a href="#" class="news-item">
+                                        京东图书勋章体系改版公告
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#" class="news-item">
+                                        京东PLUS会员权益更新及会费调整
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#" class="news-item">
+                                        京东启用全新客服电话“950618”
+                                    </a>
+                                </li>
+                                <li class="news-item">
+                                    <a href="#" class="news-item">
+                                        关于召回普利司通（天津）轮胎有限公司2个规格乘用车轮胎的公告
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <script>
-                var $first =document.querySelector('.tab-head-first');
-                var $last =document.querySelector('.tab-head-last');
-                var $active =document.querySelector('.news-tab-active')
-                $first.onmouseenter = function(){
-                    $active.style ='transform: translateX(0px);'
+                var $first = document.querySelector('.tab-head-first');
+                var $last = document.querySelector('.tab-head-last');
+                var $active = document.querySelector('.news-tab-active');
+                var $ul1 = document.querySelector('.tab-content-item1')
+                var $ul2 = document.querySelector('.tab-content-item2')
+                $first.onmouseenter = function () {
+                    $active.style = 'transform: translateX(0px);';
+                    $ul1.style = 'display:block';
+                    $ul2.style = 'display:none';
                 }
-                $last.onmouseenter = function(){
-                    $active.style ='transform: translateX(54px);'
+                $last.onmouseenter = function () {
+                    $active.style = 'transform: translateX(54px);';
+                    $ul1.style = 'display:none';
+                    $ul2.style = 'display:block';
                 }
             </script>
             <!-- 服务拓展模块 -->
-            <div class="grid-expand"></div>
+            <div class="grid-service">
+                <div class="service-entry">
+                    <ul class="service-list">
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_huafei">&#xe611</i><span
+                                    class="service_txt">话费</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_jipiao">&#xe611</i><span
+                                    class="service_txt">机票</span></a></li>
+                        <li class="service-item"><a href="#"><span class="service-corner"><i>减</i></span><i class="iconfont service_ico service_ico_jiudian">&#xe611</i><span
+                                    class="service_txt">酒店</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_youxi">&#xe611</i><span
+                                    class="service_txt">游戏</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_qiye">&#xe611</i><span
+                                    class="service_txt">企业购</span></a></li>
+                        <li class="service-item"><a href="#"><span class="service-corner"><i>减</i></span><i class="iconfont service_ico service_ico_jiayou">&#xe611</i><span
+                                    class="service_txt">加油卡</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_dianying">&#xe611</i><span
+                                    class="service_txt">电影票</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_huoche">&#xe611</i><span
+                                    class="service_txt">火车票</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_zhongchou">&#xe611</i><span
+                                    class="service_txt">众筹</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_licai">&#xe611</i><span
+                                    class="service_txt">理财</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_lipin">&#xe611</i><span
+                                    class="service_txt">礼品卡</span></a></li>
+                        <li class="service-item"><a href="#"><i class="iconfont service_ico service_ico_baitiao">&#xe611</i><span
+                                    class="service_txt">白条</span></a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
-=======
-        <div class="grid-col4 fr"></div>
->>>>>>> 3ec6b5da877fdbecb59990b19cfa8a4893c64327
     </div>
-    <!-- 中间分类区域end -->
+    <!-- 中间轮播区域end -->
 
 
     <!-- 页面底部分 start-->
-    <footer>
-        <!-- 帮助模块 -->
-        <div class="service">
-            <div class="w">
-                <ul>
-                    <li>
-                        <h5 class="service_duo">多</h5>
-                        <p>品类齐全,轻松购物</p>
-                    </li>
-                    <li>
-                        <h5 class="service_kuai">快</h5>
-                        <p>多仓直发,极速配送</p>
-                    </li>
-                    <li>
-                        <h5 class="service_hao">好</h5>
-                        <p>正品行货,精致服务</p>
-                    </li>
-                    <li>
-                        <h5 class="service_sheng">省</h5>
-                        <p>天天低价,畅选无忧</p>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <!-- 服务模块 -->
-        <div class="w help">
-            <div class="fl">
-                <dl>
-                    <dt>购物指南</dt>
-                    <dd><a href="#">购物流程</a></dd>
-                    <dd><a href="#">会员介绍</a></dd>
-                    <dd><a href="#">生活旅行</a></dd>
-                    <dd><a href="#">常见问题</a></dd>
-                    <dd><a href="#">大家电</a></dd>
-                    <dd><a href="#">联系客服</a></dd>
-                </dl>
-                <dl>
-                    <dt>配送方式</dt>
-                    <dd><a href="#">上门自提</a></dd>
-                    <dd><a href="#">211限时达</a></dd>
-                    <dd><a href="#">配送服务查询</a></dd>
-                    <dd><a href="#">配送费收取标准</a></dd>
-                    <dd><a href="#">海外配送</a></dd>
-                </dl>
-                <dl>
-                    <dt>支付方式</dt>
-                    <dd><a href="#">货到付款</a></dd>
-                    <dd><a href="#">在线支付</a></dd>
-                    <dd><a href="#">分期付款</a></dd>
-                    <dd><a href="#">邮局汇款</a></dd>
-                    <dd><a href="#">公司转账</a></dd>
-                </dl>
-                <dl>
-                    <dt>售后服务</dt>
-                    <dd><a href="#">售后政策</a></dd>
-                    <dd><a href="#">价格保护</a></dd>
-                    <dd><a href="#">退款说明</a></dd>
-                    <dd><a href="#">返修/退换货</a></dd>
-                    <dd><a href="#">取消订单</a></dd>
-                </dl>
-                <dl>
-                    <dt>特色服务</dt>
-                    <dd><a href="#">夺宝岛</a></dd>
-                    <dd><a href="#">DIV装机</a></dd>
-                    <dd><a href="#">延保服务</a></dd>
-                    <dd><a href="#">京东E卡</a></dd>
-                    <dd><a href="#">京东通信</a></dd>
-                    <dd><a href="#">京东JD+</a></dd>
-                </dl>
-            </div>
-            <div class="fr coverage">
-                <h5>京东自营覆盖区县</h5>
-                <div>
-                    <p>
-                        京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。
-                    </p>
-                    <p>
-                        <a href="#">查看详情
-                            <i class="iconfont"></i>
-                        </a>
-                    </p>
+    <div class="fooler">
+        <div class="sk">
+            <div class="sk-inner w">
+                <div class="sk-hd">
+                    <a href="#" class="sk-hd-lk">
+                        <div class="sk-tit">京东秒杀</div>
+                        <div class="sk-subtit">FLASH DEALS</div>
+                        <i class="sk-icon"></i>
+                        <div class="sk-desc">本场距离结束还剩</div>
+                        <div class="sk-cd">
+                            <div class="cd">
+                                <div class="cd-item cd-hour">
+                                    <div class="cd-item-txt">00</div>
+                                </div>
+                                <div class="cd-item cd-minute">
+                                    <div class="cd-item-txt">00</div>
+                                </div>
+                                <div class="cd-item cd-second">
+                                    <div class="cd-item-txt">00</div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="sk-bd">
+                    <div class="sk-list">
+                        <div class="sk-container swiper-container">
+                            <div class="sk-wrap swiper-wrapper">
+                                <div class="sk-list-item swiper-slide">
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk1.webp" alt="">
+                                            </div>
+                                            <p>第二件8.8元  四川蒲江黄心猕猴桃12枚 单果约80-100g  黄心奇异果 新鲜水果</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>13.8</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>39.9</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk1.webp" alt="">
+                                            </div>
+                                            <p>第二件8.8元  四川蒲江黄心猕猴桃12枚 单果约80-100g  黄心奇异果 新鲜水果</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>13.8</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>39.9</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk1.webp" alt="">
+                                            </div>
+                                            <p>第二件8.8元  四川蒲江黄心猕猴桃12枚 单果约80-100g  黄心奇异果 新鲜水果</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>13.8</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>39.9</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk1.webp" alt="">
+                                            </div>
+                                            <p>第二件8.8元  四川蒲江黄心猕猴桃12枚 单果约80-100g  黄心奇异果 新鲜水果</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>13.8</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>39.9</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sk-list-item swiper-slide">
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk5.webp" alt="">
+                                            </div>
+                                            <p>粮全其美 手抓饼 葱香味 2kg（20片装 早餐 培根烤肠 葱油饼）</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>25.8</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>38.8</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk5.webp" alt="">
+                                            </div>
+                                            <p>粮全其美 手抓饼 葱香味 2kg（20片装 早餐 培根烤肠 葱油饼）</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>25.8</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>38.8</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk5.webp" alt="">
+                                            </div>
+                                            <p>粮全其美 手抓饼 葱香味 2kg（20片装 早餐 培根烤肠 葱油饼）</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>25.8</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>38.8</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk5.webp" alt="">
+                                            </div>
+                                            <p>粮全其美 手抓饼 葱香味 2kg（20片装 早餐 培根烤肠 葱油饼）</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>25.8</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>38.8</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sk-list-item swiper-slide">
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk9.webp" alt="">
+                                            </div>
+                                            <p>乔丹 男鞋运动鞋舒适减震透气跑步鞋 XM3570307 黑色 42</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>169</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>209</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk9.webp" alt="">
+                                            </div>
+                                            <p>乔丹 男鞋运动鞋舒适减震透气跑步鞋 XM3570307 黑色 42</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>169</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>209</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk9.webp" alt="">
+                                            </div>
+                                            <p>乔丹 男鞋运动鞋舒适减震透气跑步鞋 XM3570307 黑色 42</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>169</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>209</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk9.webp" alt="">
+                                            </div>
+                                            <p>乔丹 男鞋运动鞋舒适减震透气跑步鞋 XM3570307 黑色 42</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>169</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>209</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="sk-list-item swiper-slide">
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk13.webp" alt="">
+                                            </div>
+                                            <p>佳洁士（Crest）3D炫白双效牙膏180g6支装 鹿晗定制装（新老包装随机发货）</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>49</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>101.5</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk13.webp" alt="">
+                                            </div>
+                                            <p>佳洁士（Crest）3D炫白双效牙膏180g6支装 鹿晗定制装（新老包装随机发货）</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>49</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>101.5</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk13.webp" alt="">
+                                            </div>
+                                            <p>佳洁士（Crest）3D炫白双效牙膏180g6支装 鹿晗定制装（新老包装随机发货）</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>49</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>101.5</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="sk-inner-item">
+                                        <a href="#">
+                                            <div class="sk-item-img">
+                                                <img src="images/sk13.webp" alt="">
+                                            </div>
+                                            <p>佳洁士（Crest）3D炫白双效牙膏180g6支装 鹿晗定制装（新老包装随机发货）</p>
+                                            <div class="sk-item-price">
+                                                <div class="sk-item-price-new">
+                                                    <i>￥</i>
+                                                    <span>49</span>
+                                                </div>
+                                                <div class="sk-item-price-origin">
+                                                    <i>￥</i>
+                                                    <span>101.5</span>
+                                                </div>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="sk-control sk-control-l swiper-button-prev"></div> 
+                            <div class="sk-control sk-control-r swiper-button-next"></div>
+                           
+                        </div>
+                    </div>
+                    <script>
+                        var swiper = new Swiper('.sk-container',{
+                        autoplay: false,
+                        loop : true,
+                        effect : 'fade',
+                        fadeEffect: {
+                            crossFade: true,
+                        },
+                        navigation: {
+                            nextEl: '.swiper-button-next',
+                            prevEl: '.swiper-button-prev',
+                        }
+                        });  
+                    </script>
+                    <div class="sk-chn"></div>
                 </div>
             </div>
         </div>
-        <div class="w copyright">
-            <p>
-                <a href="#">关于我们</a>
-                <span class="copyright_split">|</span>
-                <a href="#">联系我们</a>
-                <span class="copyright_split">|</span>
-                <a href="#">联系客服</a>
-                <span class="copyright_split">|</span>
-                <a href="#">合作招商</a>
-                <span class="copyright_split">|</span>
-                <a href="#">商家帮助</a>
-                <span class="copyright_split">|</span>
-                <a href="#">营销中心</a>
-                <span class="copyright_split">|</span>
-                <a href="#">手机京东</a>
-                <span class="copyright_split">|</span>
-                <a href="#">友情链接</a>
-                <span class="copyright_split">|</span>
-                <a href="#">销售联盟</a>
-                <span class="copyright_split">|</span>
-                <a href="#">京东社区</a>
-                <span class="copyright_split">|</span>
-                <a href="#">风险监测</a>
-                <span class="copyright_split">|</span>
-                <a href="#">隐私政策</a>
-                <span class="copyright_split">|</span>
-                <a href="#">京东公益</a>
-                <span class="copyright_split">|</span>
-                <a href="#">English Site</a>
-                <span class="copyright_split">|</span>
-                <a href="#">Media $ IR</a>
-            </p>
-            <div>
-                <div>
-                    <p><a href="#">京公网安备 11000002000088号</a><span class="copyright_split">|</span><span>京ICP证070359号</span><a href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a><span class="copyright_split">|</span><span>新出发京零 字第大120007号</span></p>
-                    <p><span>互联网出版许可证编号新出网证(京)字150号</span><span class="copyright_split">|</span><a href="#">出版物经营许可证</a><span class="copyright_split">|</span><a href="#">网络文化经营许可证京网文[2014]2148-348号</a><span class="copyright_split">|</span><span>违法和不良信息举报电话：4006561155</span></p>
-                    <p><span>Copyright © 2004 - 2018  京东JD.com 版权所有</span><span class="copyright_split">|</span><span>消费者维权热线：4006067733</span><a href="#">经营证照</a><span class="copyright_split">|</span><span>(京)网械平台备字(2018)第00003号</span><span class="copyright_split">|</span><a href="#">营业执照</a></p>
-                </div>
-                <div>
-                    <p>
-                        <a href="#">
-                            <i class="copyright_inter_ico copyright_global"></i>
-                            Global Site
-                        </a>
-                        <span class="copyright_split">|</span>
-                        <a href="#">
-                            <i class="copyright_inter_ico copyright_rissia"></i>
-                            Сайт России
-                        </a>
-                        <span class="copyright_split">|</span>
-                        <a href="#">
-                            <i class="copyright_inter_ico copyright_indonesia"></i>
-                            Situs Indonesia
-                        </a>
-                        <span class="copyright_split">|</span>
-                        <a href="#">
-                            <i class="copyright_inter_ico copyright_spain"></i>
-                            Sitio de España
-                        </a>
-                        <span class="copyright_split">|</span>
-                        <a href="#">
-                            <i class="copyright_inter_ico copyright_thailand"></i>
-                            เว็บไซต์ประเทศไทย
-                        </a>
-                    </p>
-                </div>
-                <div>
-                    <p>
-                        <span>京东旗下网站：</span>
-                        <a href="#">京东钱包</a>
-                        <a href="#">京东云</a>
-                    </p>
+        <script>
+            var $hour = document.querySelector('.cd-hour').firstElementChild;
+            var $minute = document.querySelector('.cd-minute').firstElementChild;
+            var $second = document.querySelector('.cd-second').firstElementChild;
+            function getNowTime() {
+			    // 获取当前时间
+                var date = new Date();
+                var hour = date.getHours();
+                var min = date.getMinutes();
+                var sec = date.getSeconds();
+                hour= 23-hour;
+                min = 60-min;
+                sec = 60-sec;
+                if(hour < 10) {
+                    hour = '0' + hour;
+                }
+                if(min < 10) {
+                    min = '0' + min;
+                }
+                if(sec < 10) {
+                    sec = '0' + sec;
+                }
+                $hour.innerHTML = hour;
+                $minute.innerHTML = min;
+                $second.innerHTML = sec;
+            }
+            getNowTime();
+            setInterval(getNowTime, 1000);
+        </script>
+        <footer>
+            <!-- 帮助模块 -->
+            <div class="service">
+                <div class="w">
+                    <ul>
+                        <li>
+                            <h5 class="service_duo">多</h5>
+                            <p>品类齐全,轻松购物</p>
+                        </li>
+                        <li>
+                            <h5 class="service_kuai">快</h5>
+                            <p>多仓直发,极速配送</p>
+                        </li>
+                        <li>
+                            <h5 class="service_hao">好</h5>
+                            <p>正品行货,精致服务</p>
+                        </li>
+                        <li>
+                            <h5 class="service_sheng">省</h5>
+                            <p>天天低价,畅选无忧</p>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <p>
-                <a href="#" class="copyright_ico copyright_ico_1">可信网站信用评估</a>
-                <a href="#" class="copyright_ico copyright_ico_2">网络警察提醒你</a>
-                <a href="#" class="copyright_ico copyright_ico_3">诚信网站</a>
-                <a href="#" class="copyright_ico copyright_ico_4">中国互联网举报中心</a>
-                <a href="#" class="copyright_ico copyright_ico_5">网络举报APP下载</a>
-            </p>
-        </div>
-    </footer>
+            <!-- 服务模块 -->
+            <div class="w help">
+                <div class="fl">
+                    <dl>
+                        <dt>购物指南</dt>
+                        <dd><a href="#">购物流程</a></dd>
+                        <dd><a href="#">会员介绍</a></dd>
+                        <dd><a href="#">生活旅行</a></dd>
+                        <dd><a href="#">常见问题</a></dd>
+                        <dd><a href="#">大家电</a></dd>
+                        <dd><a href="#">联系客服</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>配送方式</dt>
+                        <dd><a href="#">上门自提</a></dd>
+                        <dd><a href="#">211限时达</a></dd>
+                        <dd><a href="#">配送服务查询</a></dd>
+                        <dd><a href="#">配送费收取标准</a></dd>
+                        <dd><a href="#">海外配送</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>支付方式</dt>
+                        <dd><a href="#">货到付款</a></dd>
+                        <dd><a href="#">在线支付</a></dd>
+                        <dd><a href="#">分期付款</a></dd>
+                        <dd><a href="#">邮局汇款</a></dd>
+                        <dd><a href="#">公司转账</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>售后服务</dt>
+                        <dd><a href="#">售后政策</a></dd>
+                        <dd><a href="#">价格保护</a></dd>
+                        <dd><a href="#">退款说明</a></dd>
+                        <dd><a href="#">返修/退换货</a></dd>
+                        <dd><a href="#">取消订单</a></dd>
+                    </dl>
+                    <dl>
+                        <dt>特色服务</dt>
+                        <dd><a href="#">夺宝岛</a></dd>
+                        <dd><a href="#">DIV装机</a></dd>
+                        <dd><a href="#">延保服务</a></dd>
+                        <dd><a href="#">京东E卡</a></dd>
+                        <dd><a href="#">京东通信</a></dd>
+                        <dd><a href="#">京东JD+</a></dd>
+                    </dl>
+                </div>
+                <div class="fr coverage">
+                    <h5>京东自营覆盖区县</h5>
+                    <div>
+                        <p>
+                            京东已向全国2661个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。
+                        </p>
+                        <p>
+                            <a href="#">查看详情
+                                <i class="iconfont"></i>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="w copyright">
+                <p>
+                    <a href="#">关于我们</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">联系我们</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">联系客服</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">合作招商</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">商家帮助</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">营销中心</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">手机京东</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">友情链接</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">销售联盟</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">京东社区</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">风险监测</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">隐私政策</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">京东公益</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">English Site</a>
+                    <span class="copyright_split">|</span>
+                    <a href="#">Media $ IR</a>
+                </p>
+                <div>
+                    <div>
+                        <p><a href="#">京公网安备 11000002000088号</a><span class="copyright_split">|</span><span>京ICP证070359号</span><a
+                                href="#">互联网药品信息服务资格证编号(京)-经营性-2014-0008</a><span class="copyright_split">|</span><span>新出发京零
+                                字第大120007号</span></p>
+                        <p><span>互联网出版许可证编号新出网证(京)字150号</span><span class="copyright_split">|</span><a href="#">出版物经营许可证</a><span
+                                class="copyright_split">|</span><a href="#">网络文化经营许可证京网文[2014]2148-348号</a><span class="copyright_split">|</span><span>违法和不良信息举报电话：4006561155</span></p>
+                        <p><span>Copyright © 2004 - 2018 京东JD.com 版权所有</span><span class="copyright_split">|</span><span>消费者维权热线：4006067733</span><a
+                                href="#">经营证照</a><span class="copyright_split">|</span><span>(京)网械平台备字(2018)第00003号</span><span
+                                class="copyright_split">|</span><a href="#">营业执照</a></p>
+                    </div>
+                    <div>
+                        <p>
+                            <a href="#">
+                                <i class="copyright_inter_ico copyright_global"></i>
+                                Global Site
+                            </a>
+                            <span class="copyright_split">|</span>
+                            <a href="#">
+                                <i class="copyright_inter_ico copyright_rissia"></i>
+                                Сайт России
+                            </a>
+                            <span class="copyright_split">|</span>
+                            <a href="#">
+                                <i class="copyright_inter_ico copyright_indonesia"></i>
+                                Situs Indonesia
+                            </a>
+                            <span class="copyright_split">|</span>
+                            <a href="#">
+                                <i class="copyright_inter_ico copyright_spain"></i>
+                                Sitio de España
+                            </a>
+                            <span class="copyright_split">|</span>
+                            <a href="#">
+                                <i class="copyright_inter_ico copyright_thailand"></i>
+                                เว็บไซต์ประเทศไทย
+                            </a>
+                        </p>
+                    </div>
+                    <div>
+                        <p>
+                            <span>京东旗下网站：</span>
+                            <a href="#">京东钱包</a>
+                            <a href="#">京东云</a>
+                        </p>
+                    </div>
+                </div>
+                <p>
+                    <a href="#" class="copyright_ico copyright_ico_1">可信网站信用评估</a>
+                    <a href="#" class="copyright_ico copyright_ico_2">网络警察提醒你</a>
+                    <a href="#" class="copyright_ico copyright_ico_3">诚信网站</a>
+                    <a href="#" class="copyright_ico copyright_ico_4">中国互联网举报中心</a>
+                    <a href="#" class="copyright_ico copyright_ico_5">网络举报APP下载</a>
+                </p>
+            </div>
+        </footer>
+    </div>
     <!-- 页面底部分 end-->
 </body>
+
 </html>

@@ -92,7 +92,7 @@ var register = (function(){
                             $tip.className = 'input-tip error yellow';
                             // 把错误信息提前绑定到对应表单上面
                             // 通过表单找到自定义属性
-                            $tip.innerHTML = '输入格式错误'
+                            $tip.innerHTML = '输入格式错误,请重新输入'
                         }
                     }
                 }
