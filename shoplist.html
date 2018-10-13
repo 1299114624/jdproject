@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>京东(JD.COM)-正品低价、品质保障、配送及时、轻松购物！</title>
+    <link rel="shotcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/init.css">
+    <link rel="stylesheet" href="css/shoplist.css">
+    <link rel="stylesheet" href="css/header2.css">
+</head>
+<body>
+    <div class="shortcut-mod">
+        <div class="grid-cl"></div>
+    </div>
+    <div class="mod-head-mod">
+        <div class="grid-cl"></div>
+    </div>
+    <div class="seckill">
+        <div class="seckill-bg"></div>
+        <div class="seckill-header">
+            <div class="grid-cl">
+                <h3 class="skhead-tit"></h3>
+            </div>
+        </div>
+        <div class="grid-cl">
+            <ul class="timeline-list">
+                <li class="timeline-item timeline-item-selected">
+                    <a href="#" class="timeline-item-link">
+                        <div class="timeline-item-link-inner">
+                            <div class="timeline-hd">
+                                <i>距离结束00:00:00</i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="timeline-item">
+                    <a href="#" class="timeline-item-link">
+                        <div class="timeline-item-link-inner">
+                            <div class="timeline-hd">
+                                <i>明日00:00</i>
+                            </div>
+                            <div class="timeline-bd">
+                                <i>即将开始</i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="timeline-item">
+                    <a href="#" class="timeline-item-link">
+                        <div class="timeline-item-link-inner">
+                            <div class="timeline-hd">
+                                <i>明日06:00</i>
+                            </div>
+                            <div class="timeline-bd">
+                                <i>即将开始</i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="timeline-item">
+                    <a href="#" class="timeline-item-link">
+                        <div class="timeline-item-link-inner">
+                            <div class="timeline-hd">
+                                <i>明日08:00</i>
+                            </div>
+                            <div class="timeline-bd">
+                                <i>即将开始</i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+                <li class="timeline-item">
+                    <a href="#" class="timeline-item-link">
+                        <div class="timeline-item-link-inner">
+                            <div class="timeline-hd">
+                                <i>明日12:00</i>
+                            </div>
+                            <div class="timeline-bd">
+                                <i>即将开始</i>
+                            </div>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <div class="sk-wrap">
+                <div class="grid-cl">
+                    <ul class="sk-ul">
+                        <!-- <li class="sk-goods">
+                            <a href="skhtml/skgoods1.html" class="sk-goods-link">
+                                <img src="images/skgoods1.jpg" alt="">
+                                <h4 class="sk-goods-tit">温碧泉八杯水七件套护肤化妆品套装礼盒女 补水保湿（洁面乳+保湿水+乳液+嫩肤霜+眼霜+精华液）</h4>
+                            </a>
+                            <div class="sk-goods-info">
+                                <div class="sk-goods-info-txt">
+                                    <span class="sk-goods-price">
+                                        <i class="sk-goods-price-now">
+                                            <em>¥</em>129
+                                        </i>
+                                        <span class="sk-goods-price-prev">
+                                            ¥<del>399</del>
+                                        </span>
+                                    </span>
+                                    <span class="sk-goods-progress">
+                                        <i class="sk-goods-progress-txt">
+                                            已售21%
+                                        </i>
+                                        <i class="sk-goods-progress-inner">
+                                            <b class="sk-goods-progress-complete" style="width:21%"></b>
+                                        </i>
+                                    </span>
+                                </div>
+                                <a href="skhtml/skgoods1.html" class="sk-goods-info-link">立即抢购</a>
+                            </div>
+                        </li>
+                        <li class="sk-goods"></li>
+                        <li class="sk-goods"></li>
+                        <li class="sk-goods"></li>
+                        <li class="sk-goods"></li>
+                        <li class="sk-goods"></li> -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+    <script>
+        var $str = document.querySelector('.timeline-hd').firstElementChild;
+        function getNowTime() {
+            // 获取当前时间
+            var date = new Date();
+            var hour = date.getHours();
+            var min = date.getMinutes();
+            var sec = date.getSeconds();
+            hour = 23 - hour;
+            min = 60 - min;
+            sec = 60 - sec;
+            if (hour < 10) {
+                hour = '0' + hour;
+            }
+            if (min < 10) {
+                min = '0' + min;
+            }
+            if (sec < 10) {
+                sec = '0' + sec;
+            }
+            $str.innerHTML = `距离结束${hour}:${min}:${sec}`;
+        }
+        getNowTime();
+        setInterval(getNowTime, 1000);
+    </script>
+    <script src="js/ajax2.0.1.js"></script>
+    <script>
+        var $ul = document.querySelector('.sk-ul')
+        var params = {
+                url:'json/shoplist.json',
+                success:function(data){
+                    console.log(123)
+                    insertData(data);
+                }
+            }
+        sendAjax(params);
+        function insertData (data){
+            var data = data.data;
+            var arr = [];
+            for(var i = 0;i < data.length; i++){
+                arr.push(`<li class="sk-goods">
+                            <a href="skgoods${data[i].id}.html" class="sk-goods-link">
+                                <img src="${data[i].url}" alt="">
+                                <h4 class="sk-goods-tit">${data[i].ps}</h4>
+                            </a>
+                            <div class="sk-goods-info">
+                                <div class="sk-goods-info-txt">
+                                    <span class="sk-goods-price">
+                                        <i class="sk-goods-price-now">
+                                            <em>¥</em>${data[i].pricenow}
+                                        </i>
+                                        <span class="sk-goods-price-prev">
+                                            ¥<del>${data[i].priceprev}</del>
+                                        </span>
+                                    </span>
+                                    <span class="sk-goods-progress">
+                                        <i class="sk-goods-progress-txt">
+                                            已售${data[i].progress}
+                                        </i>
+                                        <i class="sk-goods-progress-inner">
+                                            <b class="sk-goods-progress-complete" style="width:${data[i].progress}"></b>
+                                        </i>
+                                    </span>
+                                </div>
+                                <a href="skgoods${data[i].id}.html" class="sk-goods-info-link">立即抢购</a>
+                            </div>
+                        </li>`)
+            }
+            $ul.innerHTML = arr.join('');
+        }
+    </script>
+    <script src="js/jquery.js"></script>
+    <script>
+        $('.shortcut-mod .grid-cl').load('header.html .shortcut');
+        $('.mod-head-mod .grid-cl').load('header.html .mod-head');
+        $('footer').load('header.html footer');
+    </script>
+</body>
+</html>

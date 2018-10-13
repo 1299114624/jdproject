@@ -1,0 +1,244 @@
+.shortcut-mod {
+    background: #e3e4e5;
+}
+.mod-head-mod {
+    background-color: #fff;
+}
+.carmain fl {
+    float: left;
+}
+body {
+    background-color: #fff;
+    color: #666;
+}
+/* car-thead */
+.car-wrap {
+    margin-bottom: 100px;
+}
+.car-thead {
+    display: block;
+    height: 32px;
+    line-height: 32px;
+    margin: 0 0 10px;
+    padding: 5px 0;
+    background: #f3f3f3;
+    border: 1px solid #e9e9e9;
+    border-top: 0;
+    position: relative;
+}
+.t-checkbox {
+    height: 18px;
+    line-height: 18px;
+    padding-top: 7px;
+    width: 152px;
+    padding-left: 11px;
+}
+.car-checkbox {
+    position: relative;
+    z-index: 3;
+    float: left;
+    margin-right: 5px;
+}
+.car-checkbox input {
+    float: none;
+    position: relative;
+    z-index: 5;
+    vertical-align: middle;
+    margin: 0 3px 0 0;
+    padding: 0;
+}
+.t-goods {
+    width: 238px;
+}
+.t-props {
+    width: 170px;
+    height: 32px;
+    padding: 0 10px 0 20px;
+}
+.t-price {
+    width: 150px;
+    padding-right: 40px;
+    text-align: right;
+}
+.t-quantity {
+    width: 110px;
+    text-align: center;
+}
+.t-sum {
+    width: 130px;
+    padding-right: 40px;
+    text-align: right;
+}
+.t-action {
+    width: 105px;
+}
+/* .car-list  */
+.item-list {
+    border-style: solid;
+    border-width: 2px 1px 1px;
+    border-color: #aaa #f1f1f1 #f1f1f1;
+    background: #fff;
+    margin-bottom: 10px;
+    
+}
+.item-single {
+    position: relative;
+    padding: 0 0 10px 70px;
+    line-height: 20px;
+    overflow: hidden;
+    background: #fff4e8;
+    border-bottom: 1px solid #c5c5c5;
+    margin-bottom: 20px;
+}
+.car-tbody .cell {
+    float: left;
+    padding: 15px 0 10px;
+}
+.car-tbody .p-checkbox {
+    position: absolute;
+    z-index: 3;
+    left: 10px;
+    top: 0;
+    width: 30px;
+    min-height: 10px;
+}
+.car-tbody .p-goods {
+    width: 330px;
+}
+.car-tbody .p-props {
+    width: 160px;
+    padding-right: 0;
+    line-height: 20px;
+    overflow: hidden;
+    padding: 15px 0 0 20px;
+    min-height: 10px;
+}
+.car-tbody .p-price {
+    width: 180px;
+    padding-right: 40px;
+    font-family: verdana;
+    text-align: right;
+}
+.car-tbody .p-quantity {
+    width: 110px;
+}
+.car-tbody .p-sum {
+    width: 130px;
+    padding-right: 40px;
+    text-align: right;
+    font-family: verdana;
+}
+.car-tbody .p-ops {
+    width: 105px;
+}
+.goods-item .p-img{
+    float: left;
+    width: 80px;
+    height: 80px;
+    border: 1px solid #eee;
+    margin-right: 10px;
+    background: #fff;
+    padding: 0;
+    text-align: center;
+    overflow: hidden;
+}
+.goods-item .p-name {
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.goods-item .p-name a {
+    color: #333;
+}
+.goods-item .p-extend{
+    margin-top: 2px;
+}
+.p-extend .promise {
+    margin: 0;
+    display: inline-block;
+    min-height: 18px;
+}
+.p-extend .promise .jd-service-icon {
+    display: inline-block;
+    width: 17px;
+    height: 16px;
+    vertical-align: middle;
+    overflow: hidden;
+    background: url(../images/cart-icons-201809.png) 0 -23px no-repeat;
+}
+.p-extend .promise a {
+    padding: 1px 4px 0 7px;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+    display: inline-block;
+}
+.p-props .props-txt {
+    width: 130px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    cursor: default;
+}
+.plus-switch {
+    cursor: pointer;
+}
+.p-price strong {
+    display: block;
+    color: #333;
+    font-weight: 400;
+}
+.p-quantity .quantity-form {
+    position: relative;
+    overflow: hidden;
+    height: 22px;
+    width: 80px;
+    margin-left: 15px;
+}
+.p-quantity .car-num-down ,.p-quantity .car-num-up{
+    border: 1px solid #cacbcb;
+    color: #666;
+    height: 18px;
+    line-height: 18px;
+    padding: 1px 0;
+    width: 16px;
+    text-align: center;
+    margin: 0;
+    background: #fff;
+}
+.p-quantity .disabled {
+    cursor: default;
+    color: #e9e9e9;
+}
+.p-quantity .car-num-down {
+    float: left;
+    border-right: 0;
+}
+.p-quantity .car-num-up {
+    float: right;
+    border-left: 0;
+}
+.quantity-form input {
+    position: absolute;
+    left: 17px;
+    top: 0;
+    border: 1px solid #cacbcb;
+    width: 42px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    padding: 1px;
+    margin: 0;
+    font-size: 12px;
+    font-family: verdana;
+    color: #333;
+}
+.p-sum strong {
+    color: #333;
+    font-weight: 700;
+    display: block;
+}
+.p-ops a {
+    color: #666;
+    display: block;
+}

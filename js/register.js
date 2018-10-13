@@ -40,17 +40,17 @@ var register = (function(){
                 } else {
                     // 发送ajax，验证用户名和密码
                     var params = {
+                        url: 'http://localhost:7086/jdproject/php/register.php',
                         method: 'post',
                         data: {
                             username: _this.$usernameInp.value,
                             password: _this.$passwordInp.value
                         },
                         success: function(data) {
-                            data = JSON.parse(data);
                             _this.register(data);
                         }
                     }
-                    sendAjax('http://localhost:7086/jdproject/php/register.php', params);
+                    sendAjax(params);
                 }
             }
             this.$ele.onclick = function (ev) {

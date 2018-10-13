@@ -7,6 +7,19 @@
 a:hover {
     color: #f10215;
 }
+.mod-price {
+    font-size: 14px;
+    color: #e33333;
+}
+.mod-price i {
+    margin-right: 3px;
+    font-family: arial;
+    font-weight: 400;
+    font-size: 12px;
+}
+.coupon_price span {
+    font-size: 34px;
+}
 @font-face {
     font-family: 'iconfont';
     src: url('../fonts/iconfont.eot');
@@ -574,4 +587,263 @@ a:hover {
     width: 180px;
     height: 260px;
     padding: 8px 10px
+}
+.sk-chn-container {
+    width: 100%;
+    height: 100%;
+}
+.sk-chn-container .sk-chn_wrap a {
+    width: 180px;
+    height: 260px;
+    display: block;
+    float: left;
+}
+.sk-chn-chnbanner1 {
+    background: url(../images/sk-chn-chnbanner1.jpg) no-repeat;
+}
+.sk-chn-chnbanner2 {
+    background: url(../images/sk-chn-chnbanner2.jpg) no-repeat;
+}
+/* ===========网格============= */
+.corechn1 , .corechn1 {
+    height: 480px;
+}
+.grid-c1 {
+    width: 1190px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+.box {
+    float: left;
+    width: 390px;
+    height: 450px;
+    margin: 0 10px 30px 0;
+    background-color: #fff;
+}
+.box-last {
+    margin-right: 0;
+}
+.box-hd {
+    height: 60px;
+    font-size: 0;
+    line-height: 0;
+    padding: 0 20px;
+}
+.box-hd-lk {
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    margin-top: 8px;
+}
+.box-tit {
+    display: inline-block;
+    font-weight: normal;
+    font-size: 22px;
+    color: #222;
+    line-height: 44px;
+}
+.box-hd-arrow {
+    width: 23px;
+    height: 23px;
+    margin-left: 4px;
+    font-size: 24px;
+    color: #f10215;
+}
+.box-subtit {
+    display: inline-block;
+    font-size: 14px;
+    color: #999;
+    height: 20px;
+    line-height: 20px;
+    margin: 12px 0 0 10px;
+    vertical-align: top;
+}
+/* ==================daily================ */
+.daily-container {
+    width: 350px;
+}
+.daily-wrap a {
+    display: block;
+    height: 355px;
+    float: left;
+}
+.daily-img {
+    display: block;
+    height: 128px;
+    margin: 0 auto 20px;
+}
+.daily-img img {
+    width: 100%;
+    height: 100%;
+}
+.daily-cover {
+    width: 100%;
+    height: 210px;
+}
+.daily-list {
+    text-align: center;
+}
+.daily-item {
+    margin: 0 4px;
+    display: inline-block;
+    width: 105px;
+    height: 105px;
+    background-color: #fff;
+    overflow: hidden;
+    line-height: 105px;
+}
+.daily-item img {
+    width: 100%;
+    height: 100%;
+}
+.daily-tit {
+    height: 58px;
+    line-height: 58px;
+    font-size: 18px;
+    text-align: center;
+    color: #222;
+}
+.daily-subtit {
+    font-size: 14px;
+    height: 36px;
+    line-height: 18px;
+    overflow: hidden;
+    color: #666;
+}
+/* ==================coupon================ */
+.coupon-container {
+    width: 350px;
+}
+.coupon_wrap {
+    height: 355px;
+}
+.coupon-item {
+    position: relative;
+    border-radius: 6px;
+    background-color: #f6f6f6;
+}
+.coupon-item:nth-child(2n) {
+    background-color: #eeefed;
+}
+.coupon-item:before ,.coupon-item:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 54px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.coupon-item:before {
+    top: -8px;
+}
+.coupon-item:after {
+    bottom: -8px;
+}
+.coupon-lk {
+    display: block;
+    height: 118px;
+    overflow: hidden;
+}
+.coupon-img {
+    float: left;
+    margin: 14px 0 0 10px;
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    overflow: hidden;
+}
+.coupon-img img {
+    width: 100%;
+    height: 100%;
+}
+.coupon-info {
+    padding-top: 15px;
+    margin: 0 72px 0 110px;
+}
+.coupon-price {
+    font-family: 'impact', sans-serif;
+    display: block;
+    height: 38px;
+    line-height: 38px;
+}
+.coupon-price i {
+    font-size: 16px;
+}
+.coupon-price span {
+    font-size: 34px;
+}
+.coupon-limit {
+    color: #b1b3b0;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.coupon-desc {
+    color: #767b77;
+    font-size: 14px;
+    line-height: 24px;
+    height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.coupon-more {
+    float: right;
+    height: 100%;
+    line-height: 118px;
+    margin-right: 34px;
+    font-size: 12px;
+    color: #333;
+}
+.coupon-more-inner {
+    width: 1px;
+    display: inline-block;
+    line-height: 15px;
+    vertical-align: middle;
+}
+
+
+
+
+
+/* ==================mime================ */
+.mime-container {
+    width: 350px;
+}
+.mime-wrap a {
+    display: block;
+    height: 355px;
+    float: left;
+}
+.mime-img {
+    display: block;
+    height: 250px;
+    margin: 0 auto 20px;
+}
+.mime-img img {
+    width: 100%;
+    height: 100%;
+}
+.mime-item-name {
+    font-size: 16px;
+    color: #333;
+    height: 50px;
+    line-height: 56px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.mime-item-desc {
+    font-size: 14px;
+    color: #999;
+    height: 40px;
+    line-height: 20px;
+    overflow: hidden;
 }

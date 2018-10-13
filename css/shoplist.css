@@ -1,0 +1,247 @@
+.shortcut-mod {
+    background-color: #e3e4e5;
+}
+.mod-head-mod {
+    background-color: #fff;
+}
+.seckill {
+    overflow: hidden;
+    position: relative;
+}
+/* 秒杀bg */
+.seckill-bg {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 274px;
+    background: url(../images/seckillbg.png) no-repeat;
+}
+.skhead-tit {
+    width: 656px;
+    height: 90px;
+    margin: 0 auto;
+    background: url(../images/skheader.png) no-repeat;
+}
+/* timeline-list */
+.timeline-list {
+    width: 1252px;
+    height: 60px;
+    margin-left: 0;
+    padding-left: 30px;
+}
+.timeline-item {
+    float: left;
+    line-height: 60px;
+    text-align: center;
+    font-size: 18px;
+    width: 225px;
+    height: 60px;
+    position: relative;
+}
+.timeline-item-selected {
+    width: 290px;
+    height: 60px;
+    margin: 0 auto;
+    
+}
+.timeline-item:nth-child(2) .timeline-item-link{
+    width: 255px;
+    margin-left: -30px;
+}
+.timeline-item:nth-child(2) .timeline-item-link-inner {
+    padding-left: 30px;
+}
+.timeline-item-selected::before {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 60px 60px;
+    border-color: transparent transparent #e01222;
+    position: absolute;
+    left: -27px;
+    top: 0;
+    z-index: 10;
+    zoom: 1;
+}
+.timeline-item-selected::after {
+    display: block;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 60px 60px 0 0;
+    border-color: #e01222 transparent transparent;
+    position: absolute;
+    right: -27px;
+    top: 0;
+    z-index: 10;
+    zoom: 1;
+}
+.timeline-item-selected .timeline-item-link {
+    margin: 0 auto;
+}
+.timeline-item-link {
+    color: #000;
+    width: 225px;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    position: relative;
+}
+.timeline-item-link-inner {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    text-align: center;
+    font-size: 0;
+    background-color: #fff;
+}
+.timeline-item-selected .timeline-item-link-inner {
+    color: #fff;
+    background-color: #e01222;
+}
+.timeline-hd {
+    height: 60px;
+    margin-right: 10px;
+    display: inline-block;
+}
+.timeline-bd {
+    height: 60px;
+    display: inline-block;
+}
+.timeline-hd i {
+    vertical-align: middle;
+    font-weight: 700;
+    font-size: 14px;
+    margin-left: 10px;
+}
+.timeline-item-selected i {
+    font-size: 20px;
+}
+.timeline-bd i {
+    border: 1px solid #666;
+    padding: 0 14px;
+    vertical-align: middle;
+    height: 26px;
+    line-height: 25px;
+    color: #666;
+    border-radius: 22px;
+    font-size: 12px;
+    display: inline-block;
+}
+/* 商品 */
+.sk-wrap .grid-cl ul {
+    margin-left: -10px;
+}
+.sk-wrap {
+    margin-top: 20px;
+}
+.sk-goods {
+    width: 290px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+    height: 390px;
+    position: relative;
+    background: #fff;
+}
+.sk-goods-link {
+    width: 230px;
+    padding: 20px 30px 0;
+    background: #fff;
+    display: block;
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    text-align: center
+}
+.sk-goods-link img {
+    height: 230px;
+    width: 230px;
+}
+.sk-goods-tit {
+    color: #333;
+    font-size: 14px;
+    margin: 20px 0;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    font-weight: 400;
+    text-align: left;
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
+}
+.sk-goods-info {
+    overflow: hidden;
+    text-align: left;
+    height: 60px;
+    display: block;
+    border: 1px solid #e01222;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 288px;
+}
+.sk-goods-info-txt {
+    padding: 12px 0 0 30px;
+    display: block;
+    position: relative;
+    line-height: 1;
+}
+.sk-goods-info-link {
+    color: #fff;
+    line-height: 62px;
+    font-size: 16px;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 89px;
+    text-align: center;
+    position: absolute;
+    background: #e01222;
+}
+.sk-goods-price {
+    display: block;
+    line-height: 1.1;
+}
+.sk-goods-progress {
+    display: block;
+    margin-top: 5px;
+}
+.sk-goods-price-now{
+    font-size: 24px;
+    color: #e01222;
+    font-family: arial;
+    margin-right: 2px;
+    line-height: 1;
+    display: inline-block;
+    min-width: 50px;
+}
+.sk-goods-price-now em {
+    font-size: 14px
+}
+.sk-goods-price-prev {
+    font-size: 14px;
+    color: #666;
+}
+.sk-goods-progress-inner {
+    width: 88px;
+    height: 8px;
+    background: #b8b8b8;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+    margin-left: 5px;
+}
+.sk-goods-progress-complete {
+    background: #e01222;
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 11px;
+}
+.sk-goods-info-link:hover {
+    color: #fff;
+}

@@ -1,0 +1,134 @@
+{
+    "msg":200,
+    "data":[
+        {
+            "id": 1,
+            "url": "images/skgoods1.jpg",
+            "pricenow": 129,
+            "priceprev":399,
+            "progress": "21%",
+            "ps": "温碧泉八杯水七件套护肤化妆品套装礼盒女"
+        },
+        {
+            "id": 2,
+            "url": "images/skgoods2.jpg",
+            "pricenow": 4989,
+            "priceprev":7280,
+            "progress": "34%",
+            "ps": "老板（Robam）大吸力侧吸式 触控抽油烟机燃气灶具套装27A3+56B0（天然气）"
+        },
+        {
+            "id": 3,
+            "url": "images/skgoods3.jpg",
+            "pricenow": 49.6,
+            "priceprev":59.9,
+            "progress": "37%",
+            "ps": "gb好孩子 婴儿湿巾 宝宝湿巾 新生儿湿巾 儿童湿纸巾 橄榄滋养卫生屁屁湿巾 80片*8包 （带盖）"
+        },
+        {
+            "id": 4,
+            "url": "images/skgoods4.jpg",
+            "pricenow": 99,
+            "priceprev":329,
+            "progress": "97%",
+            "ps": "【官方正品 品牌直营】专柜品质  舒适透气休闲鞋 飞织运动慢步鞋 黑红色 42"
+        },
+        {
+            "id": 5,
+            "url": "images/skgoods5.jpg",
+            "pricenow": 26.9,
+            "priceprev":55,
+            "progress": "28%",
+            "ps": "佳佰 衣架 成人晒衣服架 实木衬衫衣架 44.5CM肩宽 原木色 10支装 2H014"
+        },
+        {
+            "id": 6,
+            "url": "images/skgoods6.jpg",
+            "pricenow": 499,
+            "priceprev":549,
+            "progress": "27%",
+            "ps": "美的（Midea）M1-L201B升级款 变频微波炉 光波烧烤 -1℃冷火解冻 20升"
+        },
+        {
+            "id": 7,
+            "url": "images/skgoods7.jpg",
+            "pricenow": 89,
+            "priceprev":199,
+            "progress": "29%",
+            "ps": "汰渍 全效360度洗衣液超值套装（洁雅百合）3kg*2+500g*6"
+        },
+        {
+            "id": 8,
+            "url": "images/skgoods8.jpg",
+            "pricenow": 305,
+            "priceprev":368,
+            "progress": "52%",
+            "ps": "张裕（CHANGYU）红酒  特选级窖藏（圆筒装）干红葡萄酒750ml*6瓶整箱"
+        },
+        {
+            "id": 9,
+            "url": "images/skgoods9.jpg",
+            "pricenow": 59,
+            "priceprev":69.9,
+            "progress": "30%",
+            "ps": "卫新 香水洗衣液（薰衣草） 4.26kg"
+        },
+        {
+            "id": 10,
+            "url": "images/skgoods10.jpg",
+            "pricenow": 289.9,
+            "priceprev":389.9,
+            "progress": "42%",
+            "ps": "小米（MI）小米AI音箱 白色 小爱同学智能音箱 听音乐语音遥控家电 人工智能音响"
+        },
+        {
+            "id": 11,
+            "url": "images/skgoods11.jpg",
+            "pricenow": 35.8,
+            "priceprev":38.1,
+            "progress": "20%",
+            "ps": "恒大冰泉 长白山天然弱碱性矿泉水 500ml*24瓶 整箱装"
+        },
+        {
+            "id": 12,
+            "url": "images/skgoods12.jpg",
+            "pricenow": 99,
+            "priceprev":109,
+            "progress": "26%",
+            "ps": "妈妈壹选去污清洁洗衣液套装19.68斤（3kg皂液x3、300g内衣皂液x2、60ml消毒液x4和福袋一个）"
+        },
+        {
+            "id": 13,
+            "url": "images/skgoods13.jpg",
+            "pricenow": 747,
+            "priceprev":899,
+            "progress": "22%",
+            "ps": "AOC 23.6英寸 焕新二代PLS屏 1.6mm窄边框P2491VWHE/BW 广视角 爱眼不闪屏电脑显示器（HDMI版）"
+        },
+        {
+            "id": 14,
+            "url": "images/skgoods14.jpg",
+            "pricenow": 55,
+            "priceprev":79,
+            "progress": "29%",
+            "ps": "Annabella安娜贝拉海藻面膜深海矿物质精华深层补水保湿收缩毛孔  10片/盒（新旧版本随机发货）"
+        },
+        {
+            "id": 15,
+            "url": "images/skgoods15.jpg",
+            "pricenow": 158,
+            "priceprev":176,
+            "progress": "30%",
+            "ps": "合生元（BIOSTIME）儿童益生菌冲剂(益生元)原味26袋装（0-7岁宝宝婴幼儿  法国进口活性益生菌）"
+        },
+        {
+            "id": 16,
+            "url": "images/skgoods16.jpg",
+            "pricenow": 319,
+            "priceprev":359,
+            "progress": "26%",
+            "ps": "70迈智能行车记录仪Pro 1944P 500万像素 智能语音声控 超清广角夜视加强 停车监控 行车轨迹"
+        }
+        
+    ]
+}

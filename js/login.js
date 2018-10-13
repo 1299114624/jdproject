@@ -14,17 +14,17 @@ var login = (function () {
             var _this = this;
             this.$loginBtn.onclick = function () {
                 var params = {
+                    url :'http://localhost:7086/jdproject/php/login.php',
                     method: 'POST',
                     data: {
                         username: _this.$username.value,
                         password: _this.$password.value
                     },
                     success: function (data) {
-                        data = JSON.parse(data);
                         _this.loginSuccess(data);
                     }
                 }
-                sendAjax("http://localhost:7086/jdproject/php/login.php", params)
+                sendAjax(params)
             }
             this.$ele.onclick = function (ev) {
                 ev = ev || window.event;

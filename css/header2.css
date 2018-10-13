@@ -13,44 +13,11 @@
     -webkit-text-stroke-width: 0.2px;
     -moz-osx-font-smoothing: grayscale;
 }
-.w { 
-    /* 版心的公共类   */
-    width: 1190px;
-    margin: 0 auto;
-}
 .grid-cl{
     width: 1190px;
     margin: 0 auto;
 }
-/* header */
-header {
-    height: 80px;
-    background-color: #020000;
-}
-header .w {
-    position: relative;
-}
-header a {
-    display: block;
-    width: 100%;
-    height: 80px;
-    background: url(../images/header.jpg) no-repeat 50% 0;
-}
-header i {
-    cursor: pointer;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    font-weight: bold;
-    font-size: 14px;
-    color: #FFF;
-    background: rgb(45,45,45);
-    opacity: .3;
-    /* filter: alpha(opacity=30); */
-    width: 20px;
-    text-align: center;
-    line-height: 20px;
-}
+
 /* 快速导航栏begin */
 .shortcut {
     height: 30px;
@@ -58,8 +25,8 @@ header i {
     border-bottom: 1px solid #ddd;
     line-height: 30px;
 }
-.city {
-    margin-left: 200px;
+.city i {
+    color: #5c5452
 }
 .shortcut li {
     float: left;
@@ -90,122 +57,179 @@ header i {
     font-size: 16px;
 }
 /* 快速导航栏end */
-/* 中间头部分begin*/
-.middlehd {
-    height: 140px;
+/* 头部start */
+.mod-head {
+    height: 120px;
+    line-height: 118px;
+    background: #fff;
+}
+.logo-box {
     position: relative;
+    z-index: 12;
+    float: left;
+    width: 350px;
+    height: 50px;
+    margin: 15px 0 22px;
 }
 .logo {
-    position: absolute;
-    top: -30px;
-    left: 0;
-    box-shadow: 0px -12px 10px rgba(0,0,0,.2);
-    border-bottom: 1px solid #ededed;
-    z-index: 999;
-}
-.logo a {
     display: block;
-    width: 190px;
-    height: 170px;
-    background: #fff url(../images/logo.png) no-repeat;
+    margin-top: 2px;
+    width: 134px;
+    height: 42px;
+    background: url(../images/jdlogo-201708-@1x.png) no-repeat 0 0;
+    background-size: 134px 42px;
+    text-indent: -20000px;
 }
-/* 搜索框 */
-.form {
-    width: 550px;
-    height: 35px;
+.logo-box .extra {
     position: absolute;
-    top: 25px;
-    left: 320px;
+    top: 11px;
+    left: 176px;
+    width: 166px;
+    height: 45px;
+    padding-left: 11px;
+    background: #fff;
 }
-.form input {
-    width: 495px;
-    height: 33px;
-    border: 1px solid #f10215;
-    font-size: 14px;
-    padding-left: 3px;
-}
-.form button {
-    width: 50px;
-    height: 35px;
-    background-color: #f10215;
-}
-.form button i {
-    color: #fff;
-    font-size: 20px;
-}
-/* 购物车 */
-.shopCar {
-    width: 188px;
-    height: 33px;
-    border: 1px solid #ccc;
-    position: absolute;
-    top: 25px;
-    right: 95px;
-    background-color: #fff;
-    line-height: 33px;
-    text-align: center;
-    color: #f10215;
-}
-.shopCar i {
-    margin-right: 5px;
-}
-.shopCar span {
-    width: 15px;
-    height: 15px;
-    background-color: #f10215;
-    border-radius: 50%;
-    position: absolute;
-    top: 5px;
-    right: 30px;
-    font-size: 12px;
-    color: #fff;
-    line-height: 15px;
-}
-/* 关键词模块 */
-.hotwords {
-    position: absolute;
-    top: 68px;
-    left: 320px;
-}
-/* 小导航模块 */
-.navitems {
-    width: 820px;
-    height: 40px;
-    position: absolute;
-    bottom: 0;
-    left: 200px;
-    line-height: 40px;
-}
-.navitems li {
+#channel {
     float: left;
-    margin-left: 30px;
+    margin-right: 10px;
+    cursor: default;
+    font-size: 20px;
+    line-height: 45px;
+    font-weight: 400;
+    color: #666;
 }
-.navitems li a {
-    font-size: 14px;
-    font-weight: 700;
-    color: #555;
+#categorys-mini {
+    float: left;
+    color: #666;
+    font-size: 12px;
+    font-weight: 400;
+    position: relative;
+    padding-top: 12px;
+    height: 21px;
 }
-.navitems li a:hover {
-    color: #f10215;
+#categorys-mini .cw-icon {
+    color: #ccc;
+    position: relative;
+    width: 68px;
+    height: 19px;
+    border: 1px solid #ccc;
+    line-height: 19px;
+    z-index: 1;
+    background: #fff;
+    padding: 0 5px;
 }
-.navitems .space {
-    /* margin-top: 15px;
-    margin-left: 15px;
-    margin-right: -15px; */
-    margin:15px -15px 0 15px;
+#categorys-mini .ci-right {
+    top: 5px;
+    right: 6px;
+    height: 10px;
+    width: 10px;
+    overflow: hidden;
 }
-/* 超级日 */
-.supper {
+.cw-icon a {
+    color: #666;
+}
+/* serch */
+.serch-box {
+    width: 540px;
+    margin: 27px 80px 0;
+    position: relative;
+    z-index: 11;
+    float: left;
+}
+.mod-head .form {
+    width: 584px;
+    height: 36px;
+}
+.mod-head input {
+    float: left;
+    width: 450px;
+    height: 24px;
+    line-height: 24px;
+    color: #999;
+    padding: 4px;
+    margin-bottom: 4px;
+    border-width: 2px 0 2px 2px;
+    border-color: #f30213;
+    border-style: solid;
+    outline: 0;
+    font-size: 12px;
+}
+.mod-head button {
+    float: left;
+    width: 80px;
+    height: 36px;
+    font-family: tahoma,arial,Microsoft YaHei,Hiragino Sans GB,"\u5b8b\u4f53",sans-serif;
+    background: #f30213;
+    border: none;
+    border-radius: 0;
+    line-height: 1;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* settle-up */
+.settle-up {
+    float: left;
+    z-index: 11;
+    height: 36px;
+    margin-top: 27px;
+    position: relative;
+}
+.settle-up .cw-icon {
+    width: 91px;
+    height: 34px;
+    border: 1px solid #DFDFDF;
+    padding: 0 28px 0 19px;
+    background: #F9F9F9;
+    line-height: 34px;
+    position: relative;
+    cursor: default;
+    zoom: 1;
+}
+.ci-left {
     position: absolute;
-    bottom: 10px;
-    right: 0;
+    font-size: 18px;
+    left: 87px;
+    width: 16px;
+    height: 16px;
+    color: #f30213;
+    font-weight: bold;
 }
-/* 中间头部分end*/
-
-
+.settle-up .ci-count {
+    position: absolute;
+    top: 7px;
+    left: 105px;
+    display: inline-block;
+    padding: 1px;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: -1px;
+    color: #fff;
+    background-color: #da1026;
+    border-radius: 7px;
+    min-width: 14px;
+    font-family: tahoma,arial;
+    text-align: center;
+}
+.settle-up a {
+    color: #f30213;
+}
+/* hotwords */
+.hotwords {
+    width: 462px;
+    padding-left: 80px;
+    float: left;
+    height: 20px;
+    line-height: 20px;
+    overflow: hidden;
+}
+.hotwords a {
+    margin-right: 10px;
+    color: #999;
+}
+/* 头部end */
 /* 页面底部start */
 footer {
-    height: 500px;
     background-color: #eaeaea;
 }
 footer a {
@@ -215,6 +239,8 @@ footer a {
 .service {
     padding: 30px 0;
     border-bottom: 1px solid #dedede;
+}
+.service ul{
     overflow: hidden;
 }
 .service ul li {
