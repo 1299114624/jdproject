@@ -97,19 +97,28 @@
                         <a href="#" class="swiper-slide grid-banner7"></a>
                         <a href="#" class="swiper-slide grid-banner8"></a>
                     </div>
-                    <div class="grid-control grid-control-l swiper-button-prev swiper-button-white"></div>
-                    <div class="grid-control grid-control-r swiper-button-next swiper-button-white"></div>
+                    <div class="grid-control grid-control-l swiper-button-prev">
+                        <i class="iconfont">&#xe600</i>
+                    </div>
+                    <div class="grid-control grid-control-r swiper-button-next">
+                        <i class="iconfont">&#xe601</i>
+                    </div>
                     <div class="swiper-p1 swiper-pagination"></div>
                 </div>
             </div>
         </div>
         <script src="http://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.0/js/swiper.min.js"></script>
         <script>
-            var swiper = new Swiper('.grid-container', {
-                autoplay: true,
+            var Swiper1 = new Swiper('.grid-container', {
+                autoplay: {
+                    delay: 1500,
+                    stopOnLastSlide: false,
+                    disableOnInteraction: false,
+                    waitForTransition: false,
+                },
                 loop: true,
                 effect: 'fade',
-                speed: 1000,
+                speed: 500,
                 fadeEffect: {
                     crossFade: true,
                 },
@@ -120,11 +129,19 @@
                 pagination: {
                     el: '.swiper-p1',
                     clickable: true,
+                    bulletActiveClass:'focus-active',
                     renderBullet: function (index, className) {
-                        return '<li class="' + className + '">' + '</i>';
-                    },
+                    return '<li class="' + className + '">'+ '</li>';
+                    }
                 },
             });
+            Swiper1.el.onmouseover = function(){
+                Swiper1.autoplay.stop();
+            }
+            Swiper1.el.onmouseleave = function(){
+                Swiper1.autoplay.start();
+            }
+            Swiper1.pagination.$el.addClass('slider_indicators');
         </script>
         <div class="grid-col3 fl">
             <div><a href="#">
@@ -596,8 +613,12 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="sk-control sk-control-l swiper-button-prev"></div>
-                            <div class="sk-control sk-control-r swiper-button-next"></div>
+                            <div class="sk-control sk-control-l swiper-button-prev">
+                                <i class="iconfont">&#xe600</i>
+                            </div>
+                            <div class="sk-control sk-control-r swiper-button-next">
+                                <i class="iconfont">&#xe601</i>
+                            </div>
                         </div>
                     </div>
                     <div class="sk-chn">
@@ -748,8 +769,12 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="daily-control daily-control-l swiper-button-prev"></div>
-                            <div class="daily-control daily-control-r swiper-button-next"></div>
+                            <div class="box-control box-control-l swiper-button-prev">
+                                <i class="iconfont">&#xe600</i>
+                            </div>
+                            <div class="box-control box-control-r swiper-button-next">
+                                <i class="iconfont">&#xe601</i>
+                            </div>
                             <div class="swiper-p4 swiper-pagination"></div>
                         </div>
                     </div>
@@ -949,8 +974,12 @@
                                     <p class="mime-item-desc">随着天气渐渐入秋，也便代表着我们的开学季近了。将要再次踏入校园的各位小仙女可别忘了打扮自己。</p>
                                 </a>
                             </div>
-                            <div class="mime-control mime-control-l swiper-button-prev"></div>
-                            <div class="mime-control mime-control-r swiper-button-next"></div>
+                            <div class="box-control box-control-l swiper-button-prev">
+                                <i class="iconfont">&#xe600</i>
+                            </div>
+                            <div class="box-control box-control-r swiper-button-next">
+                                <i class="iconfont">&#xe601</i>
+                            </div>
                             <div class="swiper-p6 swiper-pagination"></div>
                         </div>
                     </div>
@@ -998,11 +1027,19 @@
     </div>
     <footer></footer>
     <script src="js/jquery.js"></script>
-    <script>
+    <script>  
         $('header').load('headbottom.html header');
         $('.shortcut').load('headbottom.html .shortcut');
         $('.middlehd').load('headbottom.html .middlehd');
         $('footer').load('headbottom.html footer');
+        $(document).ready(function(){
+            $("li:has(.drop-layer)").on('mouseenter',function(event){
+                $(this).find('.drop-layer').toggleClass('active');
+            })
+            $("li:has(.drop-layer)").on('mouseleave',function(event){
+                $(this).find('.drop-layer').toggleClass('active');
+            })
+        })
     </script>
 </body>
 

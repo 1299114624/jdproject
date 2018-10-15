@@ -36,23 +36,77 @@
                     <a href="shopcar.html">我的订单</a>
                 </li>
                 <li class="space"></li>
-                <li>
+                <li class="myjdli">
                     <a href="#">我的京东</a>
                     <i class="iconfont">&#xe62f</i>
+                    <div class="drop-layer">
+                        <div class="myjdlist">
+                            <ul class="fore1">
+                                <li><a href="#">待处理订单</a></li>
+                                <li><a href="#">返修退换货</a></li>
+                                <li><a href="#">降价商品</a></li>
+                            </ul>
+                            <ul class="fore1">
+                                <li><a href="#">消息</a></li>
+                                <li><a href="#">我的问答</a></li>
+                                <li><a href="#">我的关注</a></li>
+                            </ul>
+                        </div>
+                        <div class="myjdlist myjdlist2">
+                            <ul class="fore1">
+                                <li><a href="#">我的京豆</a></li>
+                                <li><a href="#">我的白条</a></li>
+                            </ul>
+                            <ul class="fore1">
+                                <li><a href="#">我的优惠券</a></li>
+                                <li><a href="#">我的理财</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </li>
                 <li class="space"></li>
                 <li>
                     <a href="#">京东会员</a>
                 </li>
                 <li class="space"></li>
-                <li>
+                <li class="qiyegou">
                     <a href="#">企业采购</a>
                     <i class="iconfont">&#xe62f</i>
+                    <div class="drop-layer">
+                        <ul>
+                            <li><a href="#">企业购</a></li>
+                            <li><a href="#">费用场景馆</a></li>
+                            <li><a href="#">工业品</a></li>
+                            <li><a href="#">礼品卡</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="space"></li>
-                <li>
+                <li class="kehuserve">
                     <a href="#">客户服务</a>
                     <i class="iconfont">&#xe62f</i>
+                    <div class="drop-layer">
+                        <div class="item-kehu">客户</div>
+                        <ul>
+                            <li><a href="#">帮助中心</a></li>
+                            <li><a href="#">售后服务</a></li>
+                            <li><a href="#">在线客服</a></li>
+                            <li><a href="#">意见建议</a></li>
+                            <li><a href="#">电话客服</a></li>
+                            <li><a href="#">客服邮箱</a></li>
+                            <li><a href="#">金融咨询</a></li>
+                            <li><a href="#">全球售客服</a></li>
+                        </ul>
+                        <div class="item-shanghu">商户</div>
+                        <ul>
+                            <li><a href="#">合作招商</a></li>
+                            <li><a href="#">学习中心</a></li>
+                            <li><a href="#">商家后台</a></li>
+                            <li><a href="#">京麦工作台</a></li>
+                            <li><a href="#">商家帮助</a></li>
+                            <li><a href="#">规则平台</a></li>
+                        </ul>
+                    </div>
                 </li>
                 <li class="space"></li>
                 <li>
@@ -60,10 +114,59 @@
                     <i class="iconfont">&#xe62f</i>
                 </li>
                 <li class="space"></li>
-                <li>
+                <li class="mobilejd">
                     <a href="#" class="mobile">手机京东
                         <img src="images/mobile.png" alt="tp" height="60" width="60">
                     </a>
+                    <div class="drop-layer">
+                        <div class="mobile-item">
+                            <div class="mobile-item-hd">
+                                <img src="images/indexmobile.png" alt="">
+                            </div>
+                            <div class="mobile-item-bd">
+                                <h5 class="mobile-pop-tit">
+                                    <a href="#none">手机京东</a>
+                                </h5>
+                                <p class="mobile-pop-value">新人专享大礼包</p>
+                                <p class="mobile-pop-device">
+                                    <a href="#none" class="mobile-pop-device-lk mobile-pop-device-ios">App store</a>
+                                    <a href="#none" class="mobile-pop-device-lk mobile-pop-device-and">安卓市场</a>
+                                    <a href="#none" class="mobile-pop-device-lk mobile-pop-device-pad">App store</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mobile-item">
+                            <div class="mobile-item-hd">
+                                <img src="images/indexmobile2.png" alt="">
+                            </div>
+                            <div class="mobile-item-bd">
+                                <h5 class="mobile-pop-tit">
+                                    <a href="#none">关注京东微信</a>
+                                </h5>
+                                <p class="mobile-pop-value">微信扫一扫关注
+                                    <br>    
+                                    新粉最高180元
+                                    <br>
+                                    惊喜礼包
+                                </p>
+                            </div>
+                        </div>
+                        <div class="mobile-item">
+                            <div class="mobile-item-hd">
+                                <img src="images/indexmobile3.png" alt="">
+                            </div>
+                            <div class="mobile-item-bd">
+                                <h5 class="mobile-pop-tit">
+                                    <a href="#none">京东金融客户端</a>
+                                </h5>
+                                <p class="mobile-pop-value">新人专享大礼包</p>
+                                <p class="mobile-pop-device">
+                                    <a href="#none" class="mobile-pop-device-lk mobile-pop-device-ios">App store</a>
+                                    <a href="#none" class="mobile-pop-device-lk mobile-pop-device-and">安卓市场</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </li>
             </ul>
         </div>
@@ -293,5 +396,14 @@
         </div>
     </footer>
     <!-- 页面底部分 end-->
+    <script src="js/jquery.js"></script>
+    <script>
+        $("li:has(.drop-layer)").on('mouseenter',function(event){
+                $(this).find('.drop-layer').toggleClass('active');
+        })
+        $("li:has(.drop-layer)").on('mouseleave',function(event){
+                $(this).find('.drop-layer').toggleClass('active');
+        })
+    </script>
 </body>
 </html>

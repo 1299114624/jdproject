@@ -131,35 +131,63 @@ a:hover {
     margin-top: -20px;
     width: 24px;
     height: 40px;
-    background-color: rgba(0,0,0,.2);
     z-index: 99;
     display: block;
+    outline: none;
+    background: none;
+    background-color: rgba(0,0,0,.2);
+    color: hsla(0,0%,100%,.4);
+    line-height: 40px;
+    text-align: center;
 } 
+.focus .grid-control i {
+    font-size: 20px;
+    color: hsla(0,0%,100%,.4);
+}
 .focus .grid-control-l{
     left: 0;
 }
 .focus .grid-control-r{
     right: 0;
 }
-/* .focus .slider_indicators {
+.focus .slider_indicators {
     z-index: 1;
     margin-left: 0!important;
     left: 46px;
     bottom: 20px;
     position: absolute;
-    text-align: center;
+    text-align: left;
 }
-.slider_indicators i {
-    width: 16px;
-    height: 16px;
+
+.slider_indicators li {
+    width: 18px;
+    height: 18px;
     position: relative;
     display: inline-block;
     border-radius: 50%;
-    background: #fff;
+    transition: all .2s ease;
+    
 }
-.slider_indicators i.active {
-    background-color: red;
-} */
+.slider_indicators li:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    transition: all .2s ease;
+    left: 4px;
+    top: 4px;
+    border: 2px solid #b9beba;
+    border-radius: 50%;
+}
+.slider_indicators .focus-active {
+    opacity: 1;
+    background: hsla(0,0%,100%,.2)
+}
+.slider_indicators .focus-active:after {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
 .grid .grid_wrap a {
     width: 590px;
     height: 470px;
@@ -604,6 +632,30 @@ a:hover {
 .sk-chn-chnbanner2 {
     background: url(../images/sk-chn-chnbanner2.jpg) no-repeat;
 }
+.sk-control,.box-control {
+    background: none;
+    top: 110px;
+    position: absolute;
+    width: 20px;
+    height: 40px;
+    line-height: 40px;
+    background-color: rgba(0,0,0,.15);
+    margin-top: -20px;
+    font-size: 20px;
+    z-index: 2;
+    border: none;
+    outline: none;
+    text-align: center;
+}
+.sk-control i ,.box-control i{
+    color: hsla(0,0%,100%,.4);
+}
+.sk-control-l,.box-control-l {
+    left: 0;
+}
+.sk-control-r,.box-control-r {
+    right: 0;
+}
 /* ===========网格============= */
 .corechn1 , .corechn1 {
     height: 480px;
@@ -709,6 +761,9 @@ a:hover {
     line-height: 18px;
     overflow: hidden;
     color: #666;
+}
+.daily .box-control {
+    top: 50%;
 }
 /* ==================coupon================ */
 .coupon-container {
@@ -846,4 +901,14 @@ a:hover {
     height: 40px;
     line-height: 20px;
     overflow: hidden;
+}
+.mime .box-control {
+    top: 50%;
+    clear: both;
+}
+.mime .box-control-l {
+    left: 0;
+}
+.mime .box-control-r {
+    right: 0;
 }
