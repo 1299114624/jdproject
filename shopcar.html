@@ -92,7 +92,37 @@
                     </div>
                 </div>
                 <div class="car-foot">
-                    <a href="#none" class="car-clear">结算</a>
+                    <div class="car-toolbar">
+                        <div class="select-all">
+                            <div class="car-checkbox">
+                                <input type="checkbox">
+                                全选
+                            </div>
+                        </div>
+                        <div class="operation">
+                            <a href="#none">删除选中的商品</a>
+                            <a href="#none">移到我的关注</a>
+                            <a href="#none" class="car-clear">清理购物车</a>
+                        </div>
+                        <div class="toolbar-right">
+                            <div class="btn-area">
+                                <a href="#">去结算</a>
+                            </div>
+                            <div class="price-sum">
+                                <span class="txt-new">总价 : </span>
+                                <span class="sum-price">
+                                    <em>
+                                        ¥1289000.00
+                                    </em>
+                                </span>
+                            </div>
+                            <div class="amount-sum">
+                                已选择
+                                <em>1</em>
+                                件商品
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -109,6 +139,7 @@
     <script>
         $(document).ready(function(){
             var $item = $('.item-single')
+            var $sumprice = $('.price-sum').find('em');
             var $add = $('.car-num-up');
             var $reduce = $('.car-num-down');
             var $input = $('.car-input');
@@ -152,12 +183,23 @@
                 }else {
                     $item.has(input).find('.car-num-down').addClass('disabled');
                 }
-                $item.has(input).find('.p-allprice-txt').html(`¥${Number(input.val())*Number($item.has(input).find('.p-price-txt').html())}`)
+                $item.has(input).find('.p-allprice-txt').html(`¥${parseInt(input.val())*parseInt($item.has(input).find('.p-price-txt').html())}`);
+                var sum = 0;
+                $(".p-allprice-txt").each(function() {
+                    sum += parseInt($(this).html().slice(1));
+                });
+                $sumprice.html('¥'+sum);
             }
             $clear.click(function(){
                 localStorage.clear();
-                shopCar.init('.item-list')
+                shopCar.init('.item-list');
+                $sumprice.html(0);
             })
+            var sum = 0;
+            $(".p-allprice-txt").each(function() {
+                sum += parseInt($(this).html().slice(1));
+            });
+            $sumprice.html('¥'+sum);
         })
     </script>
     <script>
