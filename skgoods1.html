@@ -7,13 +7,17 @@
     <title>温碧泉八杯水七件套护肤化妆品套装礼盒女</title>
     <link rel="shotcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="css/init.css">
-    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header2.css">
     <link rel="stylesheet" href="css/skgoods1.css">
 </head>
 <body>
-    <div class="shortcut"></div>
-    <div class="w middlehd"></div>
-    <div class="product-intro w clear-fix">
+    <div class="shortcut">
+        <div class="grid-cl"></div>
+    </div>
+    <div class="middlehd">
+        <div class="grid-cl"></div>
+    </div>
+    <div class="product-intro grid-cl clear-fix">
         <div class="preview-wrap">
             <img src="images/shop1.jpg" alt="">
         </div>
@@ -140,6 +144,45 @@
                 </div>
             </div>
             <div class="summary summary-choose">
+                <div class="summary summary-support li">
+                    <dt>增值业务</dt>
+                    <dd>
+                        <ul>
+                            <li class="support-giftbuy">
+                                <a href="#">
+                                    <i class="sprite-giftbuy"></i>
+                                    <span>礼品包装</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </dd>
+                </div>
+                <div class="summary summary-stock li">
+                    <dt>配送至</dt>
+                    <dd>
+                        <div class="stock-address">
+                            <div class="stock-address-wrap">
+                                北京朝阳区三环以内
+                                <i class="iconfont">&#xe62f;</i>
+                            </div>
+                        </div>
+                        <div class="stock-prompt">有货</div>
+                        <div class="stock-promise">
+                            <div class="title">支持</div>
+                            <ul>
+                                <li><a href="#">99元免基础运费(20kg内)</a></li>
+                                <li><a href="#">京准达</a></li>
+                                <li><a href="#">自提</a></li>
+                            </ul>
+                        </div>
+                    </dd>
+                </div>
+                <div class="summary summary-supply li">
+                    
+                </div>
+                <div class="summary summary-weight li">
+
+                </div>
                 <div class="choose-btn">
                     <div class="choose-amount">
                         <input type="text" class="buy-num" value="1">
@@ -245,12 +288,14 @@
         getNowTime();
         setInterval(getNowTime, 1000);
     </script>
-    <footer></footer>
+    <footer>
+        <div class="grid-cl"></div>
+    </footer>
     <script src="js/jquery.js"></script>
     <script>
-        $('.shortcut').load('headbottom.html .shortcut');
-        $('.middlehd').load('headbottom.html .middlehd');
-        $('footer').load('headbottom.html .footer');
+        $('.shortcut .grid-cl').load('header.html .shortcut');
+        $('.middlehd .grid-cl').load('header.html .mod-head');
+        $('footer .grid-cl').load('header.html .footer');
         $(document).ready(function(){
             $("li:has(.drop-layer)").on('mouseenter',function(event){
                 $(this).find('.drop-layer').toggleClass('active');

@@ -182,7 +182,7 @@ a:hover {
     display: inline-block;
     border-radius: 50%;
     transition: all .2s ease;
-    
+    outline: none;
 }
 .slider_indicators li:after {
     content: "";

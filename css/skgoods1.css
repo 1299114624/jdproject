@@ -1,10 +1,23 @@
 body {
     background-color: #fff;
+    color: #666;
 }
 .product-intro {
     margin-top: 10px;
     margin-bottom: 10px;
     height: 700px;
+}
+.iteminfo-wrap dt {
+    float: left;
+    padding-left: 10px;
+    font-family: simsun;
+    color: #999;
+}
+.iteminfo-wrap dd {
+    margin-left: 70px;
+}
+a:hover {
+    color: #f10215;
 }
 /* =====================preview-wrap================== */
 .preview-wrap {
@@ -94,10 +107,7 @@ body {
     margin-bottom: 5px;
 }
 .summary-price-wrap dt {
-    float: left;
-    padding-left: 10px;
-    font-family: simsun;
-    color: #999;
+    line-height: 33px;
 }
 .summary-price-wrap dd {
     margin-left: 70px;
@@ -280,6 +290,89 @@ body {
     position: relative;
     padding-bottom: 5px;
 }
+/* ============summary-support========== */
+.li {
+    margin-bottom: 3px;
+    line-height: 32px;
+    display: block;
+    overflow: hidden;
+}
+.li ul {
+    overflow: hidden;
+}
+.support-giftbuy {
+    margin-right: 10px;
+    float: left;
+}
+.sprite-giftbuy {
+    display: inline-block;
+    vertical-align: -4px;
+    width: 16px;
+    height: 16px;
+    background: url(../images/__sprite2.png) -16px 0 no-repeat;
+}
+.support-giftbuy span {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #ced2e6;
+    line-height: 16px;
+    border-radius: 8px;
+    padding: 0 5px 0 18px;
+    color: #5e69ad;
+    margin-left: -18px;
+}
+/* ============summary-stock========== */
+.summary-stock {
+    margin-top: -10px;
+}
+.stock-address {
+    float: left;
+    margin: 3px 5px 0 -7px;
+}
+.stock-address-wrap {
+    float: left;
+    position: relative;
+    top: 0;
+    height: 23px;
+    background: #fff;
+    border: 1px solid #CECBCE;
+    padding: 0 10px 0 4px;
+    line-height: 23px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.stock-prompt {
+    float: left;
+    margin-right: 10px;
+    color: #999;
+    height: 24px;
+    font-size: 12px;
+}
+.stock-promise {
+    height: 24px;
+}
+.stock-promise .title{
+    margin-right: 5px;
+    float: left;
+}
+.stock-promise ul{
+    display: inline-block;
+    position: relative;
+    height: 32px;
+}
+.stock-promise ul li {
+    float: left;
+}
+.stock-promise ul a{
+    color: #646FB0;
+    overflow: hidden;
+    margin-bottom: 5px;
+    padding: 0 10px;
+    border-right: 1px solid #EAEAEA;
+    white-space: nowrap;
+}
+/* ============btn========== */
+
 .choose-btn {
     margin-top: 110px;
     margin-bottom: 20px;
