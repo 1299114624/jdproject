@@ -250,7 +250,15 @@
     <script>
         $('.shortcut').load('headbottom.html .shortcut');
         $('.middlehd').load('headbottom.html .middlehd');
-        $('footer').load('headbottom.html footer');
+        $('footer').load('headbottom.html .footer');
+        $(document).ready(function(){
+            $("li:has(.drop-layer)").on('mouseenter',function(event){
+                $(this).find('.drop-layer').toggleClass('active');
+            })
+            $("li:has(.drop-layer)").on('mouseleave',function(event){
+                $(this).find('.drop-layer').toggleClass('active');
+            })
+        })
     </script>
 </body>
 </html>

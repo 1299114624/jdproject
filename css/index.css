@@ -863,11 +863,6 @@ a:hover {
     line-height: 15px;
     vertical-align: middle;
 }
-
-
-
-
-
 /* ==================mime================ */
 .mime-container {
     width: 350px;
@@ -911,4 +906,78 @@ a:hover {
 }
 .mime .box-control-r {
     right: 0;
+}
+
+/* =============chosen================== */
+.chosen-wrapper {
+    margin: 0;
+    padding-top: 10px;
+    overflow: hidden;
+}
+.chosen-item {
+    float: left;
+    width: 180px;
+    height: 184px;
+    text-align: center;
+}
+.chosen-item-img {
+    width: 110px;
+    height: 110px;
+    margin: 0 auto;
+    opacity: 0.8;
+    background: transparent;
+}
+.chosen-item-img img {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+}
+.chosen-item-tit {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    height: 16px;
+    padding: 0 10px;
+    line-height: 16px;
+    margin-top: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.chosen-item-subtit {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    padding: 0 8px;
+    margin-top: 6px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/* =============huiguang=============== */
+.huiguang a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.huiguang a>img {
+    width: 100%;
+    height: 100%;
+}
+.huiguang-cover {
+    position: relative;
+    width: 350px;
+    height: 250px;
+    margin: 0 auto;
+}
+.huiguang-list {
+    width: 360px;
+    overflow: hidden;
+    margin: 10px auto 0;
+}
+.huiguang-item {
+    float: left;
+    width: 110px;
+    height: 110px;
+    margin: 0 5px;
 }
