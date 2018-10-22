@@ -23,7 +23,7 @@ gulp.task('all', function () {
 });
 gulp.task('html', () => {
     return gulp.src('app/**/*.html')
-      .pipe(htmlmin({ collapseWhitespace: true}))
+      .pipe(htmlmin({ collapseWhitespace: true,minifyJS: true,minifyCSS: true,removeComments: true}))
       .pipe(gulp.dest('dist'))
       .pipe(connect.reload());
 });
